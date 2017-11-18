@@ -1,4 +1,54 @@
-.header
-	h1 Hello There
-	h2 How are you?
-	h3 What are you doing?
+header.header
+	.top-header
+		.container.holder
+			ul.top-menu.flex-container
+				li
+					a(href="#") О проекте
+				li
+					a(href="#") Как подключиться
+				li
+					a(href="#") Соглашение
+				li
+					a(href="#") Бонусная программа
+				li
+					a(href="#") Контакты
+			.sign-box
+				span Привет! А мы тебя не узнали :)
+				a.sign-link(href="#") Войти
+	.header-area
+		.container.flex-container
+			a.logo(href="#")
+				img(src="images/logo.png")
+			.center-box
+				svg
+					use(xlink:href='#icons-13')
+				strong уже
+					span.red 30 заказов!
+				span доставили сегодня
+			.center-box
+				svg
+					use(xlink:href='#icons-11')
+				strong 8 (800) 550-660-1
+				span круглосуточно!
+			.btn-order
+				a(href="#") Универсальный заказ
+	.search-row
+		.container.flex-container
+			.search-wrap
+				select
+					option Санкт-Петербург
+					option Санкт-Петербург
+					option Санкт-Петербург
+				select
+					option Выбрать улицу
+					option Выбрать улицу
+					option Выбрать улицу
+				input(type="submit", value="Найти рестораны")
+			a.header-sale(href="#")
+				svg
+					use(xlink:href='#icons-08')
+				strong Акции
+			a.header-cart(href="#")
+				svg
+					use(xlink:href='#icons-10')
+				strong 300 &#x20bd;

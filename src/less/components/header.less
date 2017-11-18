@@ -1,4 +1,110 @@
 .header {
-	color: @black;
-	box-sizing: border-box;
+	font-size: 18px;
+}
+.top-header {
+	border-bottom: 2px solid #eef3f4;
+	padding: 10px 0;
+	color: @grey-color;
+}
+.top-menu {
+	float: left;
+	width: 62%;
+	a {
+		text-decoration: none;
+		color: @black-color;
+	}
+}
+.sign-box {
+	float: right;
+}
+.sign-link {
+	color: @red-color;
+	display: inline-block;
+	margin-left: 10px;
+	text-decoration: none;
+}
+.header-area {
+	padding: 8px 11px;
+}
+.red {
+	color: @red-color;
+}
+.center-box {
+	position: relative;
+	padding-left: 52px;
+	color: @grey-color;
+	svg {
+		position: absolute;
+		top: 50%;
+		left: 0;
+		margin-top: -20px;
+		width: 40px;
+		height: 40px;
+	}
+	&>strong {
+		display: block;
+		color: @black-color;
+		font: 28px/32px @pts-bold;
+		.red {
+			display: inline-block;
+			margin-left: 5px;
+		}
+	}
+}
+.btn-order {
+	a {
+		.btn();
+		display: block;
+	}
+}
+.search-row {
+	background-color: @yellow-color;
+	padding: 13px 0;
+}
+.search-wrap {
+	border: 2px solid @black-color;
+	border-radius: 3px;
+	width: 70%;
+}
+.search-row {
+	a{
+		text-decoration: none;
+	}
+	svg {
+		display: inline-block;
+		vertical-align: middle;
+		margin-right: 10px;
+	}
+	.header-sale {
+		svg {
+			width: 37px;
+			height: 38px;
+		}
+		font: 24px/28px @boomboom;
+		color: @red-color;
+	}
+	.header-cart {
+		font-family: @pts-bold;
+		color: @black-color;
+		svg {
+			width: 31px;
+			height: 40px;
+		}
+		strong {
+			position: relative;
+			top: 5px;
+		}
+	}
+}
+.rub {
+	position: relative;
+	&:after {
+		height: 1px;
+		width: 100%;
+		background-color: #0f222b;
+		position: absolute;
+		top: 12px;
+		left: 0;
+		content: '';
+	}
 }

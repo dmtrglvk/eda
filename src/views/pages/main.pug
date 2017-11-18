@@ -3,3 +3,33 @@ html(lang='ru')
 	include ../common/head.pug
 	body
 		include ../components/header.pug
+		.content
+			include ../components/slider.pug
+			.category
+				.container.flex-container
+					.category-item
+						a(href="#")
+							img(src="images/sushi.jpg")
+							| Суши
+					.category-item
+						a(href="#")
+							img(src="images/pizza.jpg")
+							| Пицца
+					.category-item
+						a(href="#")
+							img(src="images/burger.jpg")
+							| ФастФуд
+					.category-item
+						a(href="#")
+							img(src="images/lunch.jpg")
+							| Обеды
+					.category-item
+						a(href="#")
+							img(src="images/soup.jpg")
+							| Супы
+					.category-item
+						a(href="#")
+							img(src="images/salad.jpg")
+							| Салаты
+			include ../components/delivery-block.pug
+			include ../components/catalog-block.pug
