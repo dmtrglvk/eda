@@ -217,6 +217,7 @@ body > svg {
 .catalog-wrap {
 	float: left;
 	width: calc(~"100% - 312px");
+	flex-wrap: wrap;
 }
 .catalog-item {
 	padding: 13px 15px 10px;
@@ -224,10 +225,16 @@ body > svg {
 	box-shadow: 0 1px 3px 1px rgba(118, 152, 159, 0.16);
 	box-sizing: border-box;
 	position: relative;
+	margin-bottom: 36px;
 	.transition(all, 0.5s);
 	.item-hover();
 	a {
 		text-decoration: none;
+		img {
+			width: 100%;
+			display: block;
+			margin-bottom: 10px;
+		}
 	}
 	.price {
 		font: 24px/28px @pts-bold;
@@ -241,6 +248,9 @@ body > svg {
 	width: 150px;
 	box-sizing: border-box;
 	justify-content: space-around;
+	position: relative;
+	font-size: 18px;
+	color: @black-color;
 	.arrow {
 		width: 15px;
 		height: 7px;
@@ -248,11 +258,71 @@ body > svg {
 		margin-left: 7px;
 		display: inline-block;
 	}
-	& > svg {
-		width: 25px;
-		height: 32px;
-		fill: @red-color;
-		vertical-align: middle;
+	.add-to-cart{
+		svg {
+			width: 25px;
+			height: 32px;
+			fill: @red-color;
+			vertical-align: middle;
+		}
+	}
+	.amount-value {
+		position: relative;
+		top: 4px;
+		cursor: pointer;
+	}
+}
+.drop-count {
+	position: absolute;
+	top: 90%;
+	right: 7px;
+	width: 213px;
+	box-sizing: border-box;
+	border: 2px solid @yellow-color;
+	border-radius: 2px;
+	padding: 10px;
+	background-color: #fff;
+	z-index: 2;
+	display: none;
+	.inner-wrap {
+		background-color: #eef3f4;
+		border-radius: 2px;
+		justify-content: space-around;
+		padding: 17px 0;
+	}
+	.amount {
+		position: relative;
+		top: 2px;
+		left: -2px;
+	}
+	.minus {
+		svg {
+			width: 23px;
+			height: 2px;
+			opacity: 0.5;
+			display: inline-block;
+			vertical-align: middle;
+		}
+	}
+	.plus {
+		svg {
+			width: 20px;
+			height: 20px;
+			opacity: 0.5;
+			display: inline-block;
+			vertical-align: middle;
+		}
+	}
+	input[type="text"] {
+		background: none;
+		border: 0;
+		width: 20px;
+		text-align: center;
+		display: inline-block;
+		padding: 0;
+		margin: 0;
+		font: 18px/24px @pts-regular;
+		color: @black-color;
 	}
 }
 .size {
@@ -290,7 +360,7 @@ body > svg {
 	&:hover {
 		.tooltip-info {
 			visibility: visible;
-			z-index: 2;
+			z-index: 3;
 			opacity: 1;
 		}
 	}
