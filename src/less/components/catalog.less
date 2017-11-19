@@ -1,0 +1,165 @@
+/*catalog*/
+.catalog-block {
+	padding: 70px 0 30px;
+	.banner {
+		float: right;
+		display: block;
+		padding: 14px;
+		border: 1px solid #d2dddf;
+		border-radius: 3px;
+		img {
+			display: block;
+		}
+	}
+}
+.catalog-wrap {
+	float: left;
+	width: calc(~"100% - 312px");
+	flex-wrap: wrap;
+}
+.catalog-item {
+	padding: 13px 15px 10px;
+	width: calc(~"33.3333% - 28px");
+	box-shadow: 0 1px 3px 1px rgba(118, 152, 159, 0.16);
+	box-sizing: border-box;
+	position: relative;
+	margin-bottom: 36px;
+	.transition(all, 0.5s);
+	.item-hover();
+	a {
+		text-decoration: none;
+		img {
+			width: 100%;
+			display: block;
+			margin-bottom: 10px;
+		}
+	}
+	.price {
+		font: 24px/28px @pts-bold;
+		color: @black-color;
+	}
+}
+.amount-box {
+	background: #eef3f4;
+	border-radius: 2px;
+	padding: 7px 7px 12px;
+	width: 150px;
+	box-sizing: border-box;
+	justify-content: space-around;
+	position: relative;
+	font-size: 18px;
+	color: @black-color;
+	.arrow {
+		width: 15px;
+		height: 7px;
+		opacity: 0.5;
+		margin-left: 7px;
+		display: inline-block;
+	}
+	.add-to-cart{
+		svg {
+			width: 25px;
+			height: 32px;
+			fill: @red-color;
+			vertical-align: middle;
+		}
+	}
+	.amount-value {
+		position: relative;
+		top: 4px;
+		cursor: pointer;
+	}
+}
+.drop-count {
+	position: absolute;
+	top: 90%;
+	right: 7px;
+	width: 213px;
+	box-sizing: border-box;
+	border: 2px solid @yellow-color;
+	border-radius: 2px;
+	padding: 10px;
+	background-color: #fff;
+	z-index: 2;
+	display: none;
+	.inner-wrap {
+		background-color: #eef3f4;
+		border-radius: 2px;
+		justify-content: space-around;
+		padding: 17px 0;
+	}
+	.amount {
+		position: relative;
+		top: 2px;
+		left: -2px;
+	}
+	.minus {
+		svg {
+			width: 23px;
+			height: 2px;
+			opacity: 0.5;
+			display: inline-block;
+			vertical-align: middle;
+		}
+	}
+	.plus {
+		svg {
+			width: 20px;
+			height: 20px;
+			opacity: 0.5;
+			display: inline-block;
+			vertical-align: middle;
+		}
+	}
+	input[type="text"] {
+		background: none;
+		border: 0;
+		width: 20px;
+		text-align: center;
+		display: inline-block;
+		padding: 0;
+		margin: 0;
+		font: 18px/24px @pts-regular;
+		color: @black-color;
+	}
+}
+.size {
+	font: 20px/24px @pts-bold;
+}
+.tooltip {
+	position: absolute;
+	top: 13px;
+	right: 15px;
+	svg {
+		width: 20px;
+		height: 20px;
+		display: inline-block;
+		fill: @orange-color;
+		cursor: pointer;
+	}
+	.tooltip-info {
+		visibility: hidden;
+		position: absolute;
+		bottom: 0;
+		width: 486px;
+		box-sizing: border-box;
+		background: #fff;
+		padding: 25px 30px;
+		color: #000;
+		box-shadow: 0 8px 9px 2px rgba(118, 152, 159, 0.16);
+		border-radius: 3px;
+		z-index: -1;
+		opacity: 0;
+		.transition(all, 0.5s);
+		p {
+			margin: 0;
+		}
+	}
+	&:hover {
+		.tooltip-info {
+			visibility: visible;
+			z-index: 3;
+			opacity: 1;
+		}
+	}
+}

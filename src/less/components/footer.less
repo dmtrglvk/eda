@@ -1,0 +1,57 @@
+.footer {
+	border-top: 2px solid #eef3f4;
+	padding: 55px 0;
+}
+.soc-links {
+	li {
+		display: inline-block;
+		width: 45px;
+		height: 45px;
+		border-radius: 50%;
+		background-color: @yellow-color;
+		.transition(color, 0.5s);
+		margin-right: 6px;
+		&:hover {
+			background-color: @orange-color;
+		}
+		a {
+			display: block;
+			height: 100%;
+			text-indent: -9999px;
+			position: relative;
+			&:after {
+				position: absolute;
+				left: 50%;
+				background-image: url("../images/sprite.png");
+				content: '';
+			}
+			&.fb {
+				&:after {
+					background-position: -95px 0;
+					width: 11px;
+					height: 23px;
+					margin-left: -6px;
+					top: 11px;
+				}
+			}
+			&.tw {
+				&:after {
+					background-position: -110px 0;
+					width: 17px;
+					height: 14px;
+					margin-left: -8px;
+					top: 16px;
+				}
+			}
+			&.vk {
+				&:after {
+					background-position: -132px 0;
+					width: 22px;
+					height: 13px;
+					margin-left: -11px;
+					top: 18px;
+				}
+			}
+		}
+	}
+}
