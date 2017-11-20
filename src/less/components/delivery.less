@@ -14,6 +14,9 @@
 	margin-bottom: 30px;
 	.transition(all, 0.5s);
 	.item-hover();
+	a {
+		text-decoration: none;
+	}
 }
 .promo-code {
 	font: 14px/18px @pts-bold;
@@ -46,11 +49,17 @@
 		display: inline-block;
 		font-size: 14px;
 		line-height: 18px;
-		color: @grey-color;
 		border: 1px solid #d2dddf;
 		border-radius: 3px;
-		padding: 3px 10px 2px;
 		margin: 0 10px 10px 0;
+		a {
+			color: @grey-color;
+			display: block;
+			padding: 3px 10px 2px;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
 	}
 }
 .bottom-info {

@@ -31,19 +31,19 @@ header.header
 				strong 8 (800) 550-660-1
 				span круглосуточно!
 			.btn-order
-				a(href="#") Универсальный заказ
+				a.red-btn(href="#") Универсальный заказ
 	.search-row
 		.container.flex-container
-			.search-wrap
-				select
+			.search-wrap.holder
+				select.grey-bg.js-select-style
 					option Санкт-Петербург
+					option Москва
 					option Санкт-Петербург
-					option Санкт-Петербург
-				select
+				select.js-select-style
 					option Выбрать улицу
-					option Выбрать улицу
-					option Выбрать улицу
-				input(type="submit", value="Найти рестораны")
+					option ул. Ленина
+					option ул. Пушкина
+				input.red-btn(type="submit", value="Найти рестораны")
 			a.header-sale(href="#")
 				svg
 					use(xlink:href='#icons-08')

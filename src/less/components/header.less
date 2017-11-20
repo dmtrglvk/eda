@@ -12,6 +12,9 @@
 	a {
 		text-decoration: none;
 		color: @black-color;
+		&:hover {
+			text-decoration: underline;
+		}
 	}
 }
 .sign-box {
@@ -49,12 +52,6 @@
 			display: inline-block;
 			margin-left: 5px;
 		}
-	}
-}
-.btn-order {
-	a {
-		.btn();
-		display: block;
 	}
 }
 .search-row {
@@ -96,15 +93,61 @@
 		}
 	}
 }
-.rub {
-	position: relative;
+.search-wrap {
+	input[type="submit"] {
+		border: 0;
+		float: right;
+		border-radius: 0;
+		cursor: pointer;
+		outline: none;
+	}
+	.jq-selectbox {
+		float: left;
+		display: block;
+		&:first-child {
+			width: 205px;
+		}
+		&:nth-child(2) {
+			width: calc(~"100% - 392px");
+		}
+	}
+	.jq-selectbox__select {
+		border: 0;
+		border-radius: 0;
+		background: #fff;
+		height: 100%;
+		font: 18px/46px @pts-regular;
+	}
+	.grey-bg {
+		.jq-selectbox__select {
+			background: #eef3f4;
+			border-right: 2px solid @black-color;
+		}
+	}
+	.jq-selectbox__trigger {
+		border-left: 0;
+	}
+}
+.jq-selectbox__trigger-arrow {
+	position: absolute;
+	top: 50%;
+	right: 26px;
+	margin-top: -4px;
 	&:after {
-		height: 1px;
-		width: 100%;
-		background-color: #0f222b;
+		background-image: url("../images/sprite.png");
+		background-position: -96px -31px;
 		position: absolute;
-		top: 12px;
+		top: 0;
 		left: 0;
+		width: 15px;
+		height: 7px;
 		content: '';
+	}
+}
+.opened {
+	.jq-selectbox__trigger-arrow {
+		&:after {
+			transform: rotate(180deg);
+		}
 	}
 }
