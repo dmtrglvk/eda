@@ -22,8 +22,21 @@
 			padding-right: 39px;
 		}
 	}
+	.main-slider {
+		.container, .owl-dots {
+			max-width: 1280px;
+			padding: 0 30px;
+		}
+		.owl-dots {
+			bottom: 30px;
+		}
+		.owl-nav {
+			display: none;
+		}
+	}
 	.slide-item {
 		height: 345px;
+		padding-top: 40px;
 	}
 	.slide-ttl {
 		font-size: 78px;
@@ -36,6 +49,28 @@
 		}
 		.category-item {
 			width: 30%;
+		}
+	}
+	.catalog-block {
+		.banner {
+			width: 229px;
+		}
+		.sub-ttl {
+			font-size: 24px;
+			line-height: 28px;
+		}
+		.amount-box {
+			width: 122px;
+		}
+	}
+	.catalog-wrap {
+		width: calc(~"100% - 250px");
+	}
+	.catalog-item {
+		&:nth-child(2n) {
+			.tooltip-info {
+				right: 0;
+			}
 		}
 	}
 	.delivery-wrap {

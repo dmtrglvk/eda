@@ -1,11 +1,30 @@
 body {
 	color: #424242;
 	font: 16px/24px @pts-regular;
+	overflow-x: hidden;
+	&.menu-opened {
+		overflow: hidden;
+		position: fixed;
+		width: 100%;
+	}
 }
 body > svg {
 	left: -9999px;
 	position: absolute;
 	top: -9999px;
+}
+.page {
+	&:after {
+		.menu-opened & {
+			position: fixed;
+			background: fade(#000, 55%);
+			top: 50px;
+			width: 100%;
+			height: calc(~"100% - 50px");
+			z-index: 69;
+			content: '';
+		}
+	}
 }
 .container {
 	max-width: 1280px;

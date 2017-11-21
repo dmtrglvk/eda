@@ -2,52 +2,52 @@ doctype html
 html(lang='ru')
 	include ../common/head.pug
 	body
-		include ../components/header.pug
-		.content
-			include ../components/slider.pug
-			.category
-				.container.flex-container
-					.category-item
-						a(href="#")
-							img(src="images/sushi.jpg")
-							| Суши
-					.category-item
-						a(href="#")
-							img(src="images/pizza.jpg")
-							| Пицца
-					.category-item
-						a(href="#")
-							img(src="images/burger.jpg")
-							| ФастФуд
-					.category-item
-						a(href="#")
-							img(src="images/lunch.jpg")
-							| Обеды
-					.category-item
-						a(href="#")
-							img(src="images/soup.jpg")
-							| Супы
-					.category-item
-						a(href="#")
-							img(src="images/salad.jpg")
-							| Салаты
-			include ../components/delivery-block.pug
-			//include ../components/catalog-block.pug
-			include ../components/feedback-block.pug
-			.description-block
-				.container.flex-container
-					.description
-						p «Сегодня никого не удивишь различными сервисами доставки еды!», - так считают многие и глубоко ошибаются. Ведь как замечательно насладиться изысканными блюдами из самых
-							a.red-color(href="#")
-								|  различных ресторанов и кофеен вашего города?
-							|  Суши, пицца, пироги, напитки на заказ – это уже буквально вчерашний день, а вот полный ассортимент блюд, меню (включая эксклюзивные авторские блюда от именитого шеф-повара) – это огромный шаг вперёд. Вся доставка еды на дом и другие города на страницах нашего сайта. Сервис приёма заказов «ПРИНЕС», как раз и включает в себя большинство перспективных и модных заведений вашего города, которые осуществляют доставку еды на дом.
-					.description
-						p При этом
-							a.red-color(href="#")
-								|  список интересных заведений
-							|  постоянно расширяется, что помогает пользователям Интернета, находясь в уютной домашней обстановке, в скучном сером будничном офисе или на зажигательной дружеской вечеринке, осуществить
-							a.red-color(href="#")
-								|  заказ выбранных блюд
-							|  прямо «к месту событий». Устройте вашей девушке или молодому человеку романтический ужин, заказав любимую лазанью, ароматный чизкейк или порцию вкуснейших сэндвичей буквально за несколько минут – за пару кликов мышкой!
-		include ../components/footer.pug
-
+		.page
+			include ../components/header.pug
+			.content
+				include ../components/slider.pug
+				.category
+					.container.flex-container
+						.category-item
+							a(href="#")
+								img(src="images/sushi.jpg")
+								| Суши
+						.category-item
+							a(href="#")
+								img(src="images/pizza.jpg")
+								| Пицца
+						.category-item
+							a(href="#")
+								img(src="images/burger.jpg")
+								| ФастФуд
+						.category-item
+							a(href="#")
+								img(src="images/lunch.jpg")
+								| Обеды
+						.category-item
+							a(href="#")
+								img(src="images/soup.jpg")
+								| Супы
+						.category-item
+							a(href="#")
+								img(src="images/salad.jpg")
+								| Салаты
+				include ../components/delivery-block.pug
+				include ../components/catalog-block.pug
+				include ../components/feedback-block.pug
+				.description-block
+					.container.flex-container
+						.description
+							p «Сегодня никого не удивишь различными сервисами доставки еды!», - так считают многие и глубоко ошибаются. Ведь как замечательно насладиться изысканными блюдами из самых
+								a.red-color(href="#")
+									|  различных ресторанов и кофеен вашего города?
+								|  Суши, пицца, пироги, напитки на заказ – это уже буквально вчерашний день, а вот полный ассортимент блюд, меню (включая эксклюзивные авторские блюда от именитого шеф-повара) – это огромный шаг вперёд. Вся доставка еды на дом и другие города на страницах нашего сайта. Сервис приёма заказов «ПРИНЕС», как раз и включает в себя большинство перспективных и модных заведений вашего города, которые осуществляют доставку еды на дом.
+						.description
+							p При этом
+								a.red-color(href="#")
+									|  список интересных заведений
+								|  постоянно расширяется, что помогает пользователям Интернета, находясь в уютной домашней обстановке, в скучном сером будничном офисе или на зажигательной дружеской вечеринке, осуществить
+								a.red-color(href="#")
+									|  заказ выбранных блюд
+								|  прямо «к месту событий». Устройте вашей девушке или молодому человеку романтический ужин, заказав любимую лазанью, ароматный чизкейк или порцию вкуснейших сэндвичей буквально за несколько минут – за пару кликов мышкой!
+			include ../components/footer.pug

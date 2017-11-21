@@ -72,6 +72,15 @@
 		right: 0;
 		padding: 0;
 	}
+	.show-more {
+		display: none;
+		text-decoration: none;
+		color: @red-color;
+		font-family: @pts-regular;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
 }
 .feedback-header {
 	padding: 0 140px 0 49px;
@@ -79,9 +88,6 @@
 .feedback-comment {
 	font-family: @pts-italic;
 	p {
-		margin: 0 0 10px;
-		&:last-child {
-			margin: 0;
-		}
+		margin: 0;
 	}
 }

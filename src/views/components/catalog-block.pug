@@ -15,15 +15,18 @@
 					.price-row.flex-container
 						strong.price 58 &#x20bd;
 						.amount-box.flex-container
-							span.amount-value 1 шт
+							span.amount-value.js-amount-opener
+								span.js-amount-value 1
+								|  шт
 								svg.arrow
 									use(xlink:href='#icons-18')
 							a.add-to-cart(href="#")
 								svg
 									use(xlink:href='#icons-10')
-							.drop-count
+							.drop-count.js-amount-adjuster
 								.number-plus-minus
 									input(type="number", min="1", value="1")
+									span.mark-amount шт
 				.catalog-item
 					.tooltip
 						svg
@@ -34,17 +37,20 @@
 						img(src="images/img02.jpg")
 						span.sub-ttl Сандерс
 					.price-row.flex-container
-						strong.price 89 &#x20bd;
+						strong.price 58 &#x20bd;
 						.amount-box.flex-container
-							span.amount-value 1 шт
+							span.amount-value.js-amount-opener
+								span.js-amount-value 1
+								|  шт
 								svg.arrow
 									use(xlink:href='#icons-18')
 							a.add-to-cart(href="#")
 								svg
 									use(xlink:href='#icons-10')
-							.drop-count
+							.drop-count.js-amount-adjuster
 								.number-plus-minus
 									input(type="number", min="1", value="1")
+									span.mark-amount шт
 				.catalog-item
 					.tooltip
 						svg
@@ -68,6 +74,7 @@
 							.drop-count
 								.number-plus-minus
 									input(type="number", min="1", value="1")
+									span.mark-amount шт
 				.catalog-item
 					.tooltip
 						svg
@@ -89,6 +96,7 @@
 							.drop-count
 								.number-plus-minus
 									input(type="number", min="1", value="1")
+									span.mark-amount шт
 				.catalog-item
 					.tooltip
 						svg
@@ -110,6 +118,7 @@
 							.drop-count
 								.number-plus-minus
 									input(type="number", min="1", value="1")
+									span.mark-amount шт
 				.catalog-item
 					.tooltip
 						svg
@@ -131,5 +140,6 @@
 							.drop-count
 								.number-plus-minus
 									input(type="number", min="1", value="1")
+									span.mark-amount шт
 			a.banner(href="#")
 				img(src="images/banner.jpg")
