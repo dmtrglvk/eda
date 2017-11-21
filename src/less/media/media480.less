@@ -1,0 +1,97 @@
+@media screen and (max-width: 767px) {
+	.header {
+		position: relative;
+		.logo {
+			background-image: url("../images/md-logo.png");
+			width: 117px;
+			height: 38px;
+			position: absolute;
+			top: 5px;
+			left: 20px;
+		}
+	}
+	.top-header {
+		padding: 10px 0 0;
+	}
+	.top-menu {
+		display: none;
+	}
+	.menu-opener {
+		display: block;
+	}
+	.sign-link {
+		span {
+			display: none;
+		}
+		svg {
+			display: block;
+		}
+	}
+	.header-area {
+		padding: 20px 0;
+	}
+	.center-box {
+		& > strong {
+			font-size: 18px;
+			line-height: 22px;
+		}
+	}
+	.search-row {
+		.flex-container {
+			display: block;
+		}
+		.header-sale {
+			position: absolute;
+			top: 9px;
+			right: 235px;
+			& > strong {
+				display: none;
+			}
+			svg {
+				width: 30px;
+				height: 30px;
+			}
+		}
+		.header-cart {
+			position: absolute;
+			top: 6px;
+			right: 122px;
+			svg {
+				width: 26px;
+				height: 34px;
+			}
+		}
+	}
+	.search-wrap {
+		width: 100%;
+	}
+	.slide-ttl {
+		font-size: 64px;
+		line-height: 68px;
+	}
+	.delivery-item {
+		.rating-row {
+			clear: left;
+			margin-bottom: 5px;
+		}
+	}
+	.footer-area {
+		.footer-col {
+			float: none;
+			margin-bottom: 40px;
+			&:nth-child(2) {
+				width: 100%;
+				.flex-container {
+					justify-content: space-around;
+				}
+			}
+			&:last-child {
+				text-align: center;
+				width: 100%;
+			}
+		}
+	}
+	.footer-row {
+		padding-top: 0;
+	}
+}

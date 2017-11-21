@@ -17,6 +17,37 @@
 		}
 	}
 }
+.menu-opener {
+	float: right;
+	width: 28px;
+	height: 19px;
+	position: relative;
+	margin: 5px 0 0 25px;
+	display: none;
+	span {
+		display: inline-block;
+		text-indent: -9999px;
+		background-color: @black-color;
+		height: 3px;
+		width: 100%;
+		margin-top: 8px;
+	}
+	&:before, &:after {
+		position: absolute;
+		left: 0;
+		right: 0;
+		background-color: @black-color;
+		height: 3px;
+		width: 100%;
+		content: '';
+	}
+	&:before {
+		top: 0;
+	}
+	&:after {
+		bottom: 0;
+	}
+}
 .sign-box {
 	float: right;
 }
@@ -25,6 +56,13 @@
 	display: inline-block;
 	margin-left: 10px;
 	text-decoration: none;
+	svg {
+		width: 30px;
+		height: 30px;
+		fill: @black-color;
+		vertical-align: middle;
+		display: none;
+	}
 }
 .header-area {
 	padding: 8px 0;
@@ -69,7 +107,7 @@
 .search-wrap {
 	border: 2px solid @black-color;
 	border-radius: 3px;
-	width: 70%;
+	width: 67%;
 }
 .search-row {
 	a{
@@ -102,7 +140,7 @@
 	}
 }
 .search-wrap {
-	input[type="submit"] {
+	button {
 		border: 0;
 		float: right;
 		border-radius: 0;

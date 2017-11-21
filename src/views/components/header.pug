@@ -12,9 +12,14 @@ header.header
 					a(href="#") Бонусная программа
 				li
 					a(href="#") Контакты
+			a.menu-opener(href="#")
+				span open menu
 			.sign-box
 				span Привет! А мы тебя не узнали :)
-				a.sign-link(href="#") Войти
+				a.sign-link(href="#")
+					span Войти
+					svg
+						use(xlink:href='#icons-09')
 	.header-area
 		.container.flex-container
 			a.logo(href="#") Принес время для Вас
@@ -42,7 +47,8 @@ header.header
 					option Выбрать улицу
 					option ул. Ленина
 					option ул. Пушкина
-				input.red-btn(type="submit", value="Найти рестораны")
+				button.red-btn Найти
+					span  рестораны
 			a.header-sale(href="#")
 				svg
 					use(xlink:href='#icons-08')

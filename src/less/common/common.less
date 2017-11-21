@@ -59,16 +59,20 @@ body > svg {
 .category {
 	font: 28px/32px @boomboom;
 	padding: 50px 0 10px;
+	.flex-container {
+		align-items: flex-end;
+	}
 	.category-item {
 		text-align: center;
 		margin-bottom: 40px;
 		img {
 			display: block;
 			margin: 0 auto 10px;
+			max-width: 100%;
 		}
 	}
 	a {
-		display: block;
+		display: inline-block;
 		color: @yellow-color;
 		text-decoration: none;
 		.transition(color, 0.5s);

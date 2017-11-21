@@ -1,5 +1,131 @@
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 999px) {
+	.top-menu {
+		font-size: 16px;
+	}
 	.hidden-box {
 		display: none;
+	}
+	.search-wrap {
+		button {
+			span {
+				display: none;
+			}
+		}
+		.jq-selectbox:first-child {
+			width: 173px;
+		}
+		.jq-selectbox:nth-child(2) {
+			width: calc(~"100% - 271px");
+		}
+		.jq-selectbox__select {
+			font-size: 16px;
+			padding-right: 39px;
+		}
+	}
+	.slide-item {
+		height: 345px;
+	}
+	.slide-ttl {
+		font-size: 78px;
+		line-height: 82px;
+		padding-bottom: 15px;
+	}
+	.category {
+		.flex-container {
+			flex-wrap: wrap;
+		}
+		.category-item {
+			width: 30%;
+		}
+	}
+	.delivery-wrap {
+		display: block;
+		.delivery-item {
+			width: 100%;
+		}
+		.rating-row {
+			clear: none;
+		}
+	}
+	.feedback-item {
+		padding: 16px 20px;
+		.user-side {
+			float: none;
+			width: 100%;
+			padding-right: 132px;
+			box-sizing: border-box;
+			margin-bottom: 12px;
+		}
+		.user-photo {
+			display: none;
+		}
+		.user-info {
+			span {
+				display: inline-block;
+				margin-right: 7px;
+			}
+		}
+	}
+	.feedback-header {
+		padding-right: 0;
+	}
+	.feedback-body {
+		overflow: visible;
+		border-left: 0;
+		padding-left: 0;
+		.mark {
+			left: 0;
+		}
+		.rating-list {
+			top: -37px;
+			right: -8px;
+		}
+		.sub-ttl {
+			white-space: normal;
+		}
+	}
+	.description-block {
+		padding: 50px 0 25px;
+		.flex-container {
+			display: block;
+		}
+		.description {
+			width: 100%;
+		}
+	}
+	.footer {
+		padding: 39px 0 30px;
+	}
+	.footer-area {
+		.footer-col {
+			&:first-child {
+				float: none;
+				width: 100%;
+				margin-bottom: 40px;
+				text-align: center;
+			}
+			&:nth-child(2){
+				width: 58%;
+			}
+			.footer-logo {
+				display: inline-block;
+				width: 208px;
+				margin: 0 32px 0 0;
+				vertical-align: middle;
+			}
+			.soc-links {
+				display: inline-block;
+				vertical-align: middle;
+			}
+		}
+	}
+	.footer-row {
+		text-align: center;
+		.footer-col {
+			float: none;
+			display: block;
+			width: 100%;
+			margin: 0;
+		}
 	}
 }
