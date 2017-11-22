@@ -13,6 +13,7 @@ $(document).ready(function () {
 
 	mobileMenu();
 	amountDrop();
+	sidebarAccordion();
 
 	$('.js-show-more').on('click', function(e){
 		e.preventDefault();
@@ -70,6 +71,16 @@ function amountDrop() {
 			openedItem.find(amountValue).text(newAmount);
 			amountAdjuster.removeClass('opened-amountAdjuster').hide();
 		}
+	})
+}
+
+function sidebarAccordion() {
+	var opener = $('.js-block-opener'),
+		openedBlock = $('.js-opened-block');
+
+	opener.on('click', function(){
+		var $this = $(this);
+		$this.toggleClass('opened').next(openedBlock).stop().slideToggle();
 	})
 }
 

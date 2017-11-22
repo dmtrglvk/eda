@@ -28,110 +28,427 @@ html(lang='ru')
 									option Сначала вегетарианское меню
 							.soc-widget
 								img(src="images/soc-widget.png")
-					.content-wrap
-						.sidebar
-							.sidebar-section.search-box
-								form(action="#")
-									fieldset
-										.holder
-											button.search
+					.content-wrap.holder
+						.cols-wrap
+							.sidebar
+								.sidebar-section.search-box
+									form(action="#")
+										fieldset
+											.holder
+												button.search
+													svg
+														use(xlink:href='#icons-26')
+												input(type="text", placeholder="Название ресторана")
+								.sidebar-section
+									.sidebar-box
+										strong.box-ttl.js-block-opener.opened Блюда
+											svg
+												use(xlink:href='#icons-18')
+										.sidebar-info.js-opened-block.opened
+											ul.sidebar-filter
+												li
+													.checkbox-holder
+														input(type="checkbox" id="filter01")
+														label(for="filter01") Пицца
+												li
+													.checkbox-holder
+														input(type="checkbox" id="filter02")
+														label(for="filter02") Суши
+												li
+													.checkbox-holder
+														input(type="checkbox" id="filter03")
+														label(for="filter03") Бурритос
+												li
+													.checkbox-holder
+														input(type="checkbox" id="filter04")
+														label(for="filter04") Бургеры
+												li
+													.checkbox-holder
+														input(type="checkbox" id="filter05")
+														label(for="filter05") Салаты
+												li
+													.checkbox-holder
+														input(type="checkbox" id="filter06")
+														label(for="filter06") Первые блюда
+												li
+													.checkbox-holder
+														input(type="checkbox" id="filter07")
+														label(for="filter07") Паста
+												li
+													.checkbox-holder
+														input(type="checkbox" id="filter08")
+														label(for="filter08") Лапша
+												li
+													.checkbox-holder
+														input(type="checkbox" id="filter09")
+														label(for="filter09") Морепродукты
+												li
+													.checkbox-holder
+														input(type="checkbox" id="filter10")
+														label(for="filter10") Шашлыки
+												li
+													.checkbox-holder
+														input(type="checkbox" id="filter11")
+														label(for="filter11") Пельмени
+												li
+													.checkbox-holder
+														input(type="checkbox" id="filter12")
+														label(for="filter12") Пироги
+												li
+													.checkbox-holder
+														input(type="checkbox" id="filter13")
+														label(for="filter13") Пончики
+												li
+													.checkbox-holder
+														input(type="checkbox" id="filter14")
+														label(for="filter14") Блины
+												li
+													.checkbox-holder
+														input(type="checkbox" id="filter15")
+														label(for="filter15") Десерты
+									.sidebar-box
+										strong.box-ttl.js-block-opener Кухня
+											svg
+												use(xlink:href='#icons-18')
+										.sidebar-info.js-opened-block
+											ul
+												li
+													.checkbox-holder
+														input(type="checkbox" id="filter16")
+														label(for="filter16") Пицца
+												li
+													.checkbox-holder
+														input(type="checkbox" id="filter17")
+														label(for="filter17") Суши
+												li
+													.checkbox-holder
+														input(type="checkbox" id="filter18")
+														label(for="filter03") Бурритос
+												li
+													.checkbox-holder
+														input(type="checkbox" id="filter19")
+														label(for="filter19") Бургеры
+									.sidebar-box
+										strong.box-ttl.js-block-opener.opened Сумма заказа
+											svg
+												use(xlink:href='#icons-18')
+										.sidebar-info.js-opened-block.opened
+											.slider-bar
+												.slider-bar-holder
+													.input-holder
+														span от
+														input(type="text" class="min" name="price-min")
+														span р
+													.input-holder
+														span от
+														input(type="text" class="max" name="price-max")
+														span р
+												.slider-range-bar(data-min="100" data-max="10000")
+							.aside
+								img.content-banner(src="images/banner02.jpg")
+								img.content-banner(src="images/banner03.jpg")
+						.delivery-wrap
+							.delivery-item
+								.top-info.holder
+									span.promo-code Промо коды
+									.item-logo
+										img(src="images/sm-logo01.jpg")
+									a.sub-ttl(href="#") Доставка из Мака Сургут
+									ul.labels-list
+										li
+											a(href="#") Бургеры
+										li
+											a(href="#") Американская
+									.rating-row
+										ul.rating-list
+											li.active
 												svg
-													use(xlink:href='#icons-26')
-											input(type="text", placeholder="Название ресторана")
-							.sidebar-section
-								.sidebar-box
-									strong.box-ttl Блюда
-									ul
+													use(xlink:href='#icons-05')
+											li.active
+												svg
+													use(xlink:href='#icons-05')
+											li.active
+												svg
+													use(xlink:href='#icons-05')
+											li.active
+												svg
+													use(xlink:href='#icons-05')
+											li.active
+												svg
+													use(xlink:href='#icons-05')
+										span 2123 оценки
+										ul.payment-list
+											li.wallet
+												svg
+													use(xlink:href='#icons-03')
+											li.mastercard
+												svg
+													use(xlink:href='#icons-01')
+											li.visa
+												svg
+													use(xlink:href='#icons-02')
+								.bottom-info
+									.flex-container
+										.cell
+											span.cell-header Доставка
+											strong.cell-value 300 &#x20bd;
+										.cell
+											span.cell-header Мин. заказ
+											strong.cell-value -
+										.cell
+											span.cell-header Время доставки
+											strong.cell-value 60 минут
+										.cell
+											span.cell-header Время работы
+											strong.cell-value 10:00 — 23:00
+							.delivery-item
+								.top-info.holder
+									.item-logo
+										img(src="images/sm-logo02.jpg")
+									a.sub-ttl(href="#") KFC Нижневартовск
+									ul.labels-list
 										li
-											.checkbox-holder
-												input(type="checkbox" id="filter01")
-												label(for="filter01") Пицца
+											a(href="#") Бургеры
 										li
-											.checkbox-holder
-												input(type="checkbox" id="filter02")
-												label(for="filter02") Суши
+											a(href="#") Американская
+									.rating-row
+										ul.rating-list
+											li.active
+												svg
+													use(xlink:href='#icons-05')
+											li.active
+												svg
+													use(xlink:href='#icons-05')
+											li.active
+												svg
+													use(xlink:href='#icons-05')
+											li.active
+												svg
+													use(xlink:href='#icons-05')
+											li
+												svg
+													use(xlink:href='#icons-05')
+										span 2123 оценки
+										ul.payment-list
+											li.wallet
+												svg
+													use(xlink:href='#icons-03')
+											li.mastercard
+												svg
+													use(xlink:href='#icons-01')
+											li.visa
+												svg
+													use(xlink:href='#icons-02')
+								.bottom-info
+									.flex-container
+										.cell
+											span.cell-header Доставка
+											strong.cell-value бесплатно
+										.cell
+											span.cell-header Мин. заказ
+											strong.cell-value 100 &#x20bd;
+										.cell
+											span.cell-header Время доставки
+											strong.cell-value 30 минут
+										.cell
+											span.cell-header Время работы
+											strong.cell-value 09:00 — 23:00
+							.delivery-item
+								.top-info.holder
+									.item-logo
+										img(src="images/sm-logo03.jpg")
+									a.sub-ttl(href="#") Универсальная доставка
+									ul.labels-list
 										li
-											.checkbox-holder
-												input(type="checkbox" id="filter03")
-												label(for="filter03") Бурритос
+											a(href="#") Европейская
 										li
-											.checkbox-holder
-												input(type="checkbox" id="filter04")
-												label(for="filter04") Бургеры
+											a(href="#") Китайская
 										li
-											.checkbox-holder
-												input(type="checkbox" id="filter05")
-												label(for="filter05") Салаты
+											a(href="#") Русская
+									.rating-row
+										ul.rating-list
+											li.active
+												svg
+													use(xlink:href='#icons-05')
+											li.active
+												svg
+													use(xlink:href='#icons-05')
+											li.active
+												svg
+													use(xlink:href='#icons-05')
+											li.active
+												svg
+													use(xlink:href='#icons-05')
+											li
+												svg
+													use(xlink:href='#icons-05')
+										span 212 оценки
+										ul.payment-list
+											li.wallet
+												svg
+													use(xlink:href='#icons-03')
+								.bottom-info
+									.flex-container
+										.cell
+											span.cell-header Доставка
+											strong.cell-value бесплатно
+										.cell
+											span.cell-header Мин. заказ
+											strong.cell-value 200 &#x20bd;
+										.cell
+											span.cell-header Время доставки
+											strong.cell-value 40 минут
+										.cell
+											span.cell-header Время работы
+											strong.cell-value 10:00 — 23:00
+							.delivery-item
+								.top-info.holder
+									span.promo-code Промо коды
+									.item-logo
+										img(src="images/sm-logo04.jpg")
+									a.sub-ttl(href="#") Кофе есть
+									ul.labels-list
 										li
-											.checkbox-holder
-												input(type="checkbox" id="filter06")
-												label(for="filter06") Первые блюда
+											a(href="#") Бургеры
 										li
-											.checkbox-holder
-												input(type="checkbox" id="filter07")
-												label(for="filter07") Паста
+											a(href="#") Американская
+									.rating-row
+										ul.rating-list
+											li.active
+												svg
+													use(xlink:href='#icons-05')
+											li.active
+												svg
+													use(xlink:href='#icons-05')
+											li.active
+												svg
+													use(xlink:href='#icons-05')
+											li.active
+												svg
+													use(xlink:href='#icons-05')
+											li.active
+												svg
+													use(xlink:href='#icons-05')
+										span 223 оценки
+										ul.payment-list
+											li.mastercard
+												svg
+													use(xlink:href='#icons-01')
+											li.visa
+												svg
+													use(xlink:href='#icons-02')
+								.bottom-info
+									.flex-container
+										.cell
+											span.cell-header Доставка
+											strong.cell-value бесплатно
+										.cell
+											span.cell-header Мин. заказ
+											strong.cell-value -
+										.cell
+											span.cell-header Время доставки
+											strong.cell-value 30 минут
+										.cell
+											span.cell-header Время работы
+											strong.cell-value 10:00 — 23:00
+							.delivery-item
+								.top-info.holder
+									.item-logo
+										img(src="images/sm-logo05.jpg")
+									a.sub-ttl(href="#") Японапапа
+									ul.labels-list
 										li
-											.checkbox-holder
-												input(type="checkbox" id="filter08")
-												label(for="filter08") Лапша
+											a(href="#") Европейская
 										li
-											.checkbox-holder
-												input(type="checkbox" id="filter09")
-												label(for="filter09") Морепродукты
+											a(href="#") Китайская
 										li
-											.checkbox-holder
-												input(type="checkbox" id="filter10")
-												label(for="filter10") Шашлыки
+											a(href="#") Русская
+									.rating-row
+										ul.rating-list
+											li.active
+												svg
+													use(xlink:href='#icons-05')
+											li.active
+												svg
+													use(xlink:href='#icons-05')
+											li.active
+												svg
+													use(xlink:href='#icons-05')
+											li.active
+												svg
+													use(xlink:href='#icons-05')
+											li.active
+												svg
+													use(xlink:href='#icons-05')
+										span 223 оценки
+										ul.payment-list
+											li.wallet
+												svg
+													use(xlink:href='#icons-03')
+											li.mastercard
+												svg
+													use(xlink:href='#icons-01')
+											li.visa
+												svg
+													use(xlink:href='#icons-02')
+								.bottom-info
+									.flex-container
+										.cell
+											span.cell-header Доставка
+											strong.cell-value бесплатно
+										.cell
+											span.cell-header Мин. заказ
+											strong.cell-value 200 &#x20bd;
+										.cell
+											span.cell-header Время доставки
+											strong.cell-value 40 минут
+										.cell
+											span.cell-header Время работы
+											strong.cell-value 10:00 — 23:00
+							.delivery-item
+								.top-info.holder
+									.item-logo
+										img(src="images/sm-logo06.jpg")
+									a.sub-ttl(href="#") Студия правильного питания Fffffff
+									ul.labels-list
 										li
-											.checkbox-holder
-												input(type="checkbox" id="filter11")
-												label(for="filter11") Пельмени
+											a(href="#") Бургеры
 										li
-											.checkbox-holder
-												input(type="checkbox" id="filter12")
-												label(for="filter12") Пироги
-										li
-											.checkbox-holder
-												input(type="checkbox" id="filter13")
-												label(for="filter13") Пончики
-										li
-											.checkbox-holder
-												input(type="checkbox" id="filter14")
-												label(for="filter14") Блины
-										li
-											.checkbox-holder
-												input(type="checkbox" id="filter15")
-												label(for="filter15") Десерты
-								.sidebar-box
-									strong.box-ttl Кухня
-									ul
-										li
-											.checkbox-holder
-												input(type="checkbox" id="filter16")
-												label(for="filter16") Пицца
-										li
-											.checkbox-holder
-												input(type="checkbox" id="filter17")
-												label(for="filter17") Суши
-										li
-											.checkbox-holder
-												input(type="checkbox" id="filter18")
-												label(for="filter03") Бурритос
-										li
-											.checkbox-holder
-												input(type="checkbox" id="filter19")
-												label(for="filter19") Бургеры
-								.sidebar-box
-									strong.box-ttl Сумма заказа
-									.slider-bar
-										.slider-bar-holder
-											.input-holder
-												span от
-												input(type="text" class="min" name="price-min")
-												span р
-											.input-holder
-												span от
-												input(type="text" class="max" name="price-max")
-												span р
-										.slider-range-bar(data-min="100" data-max="10000")
+											a(href="#") Американская
+									.rating-row
+										ul.rating-list
+											li.active
+												svg
+													use(xlink:href='#icons-05')
+											li.active
+												svg
+													use(xlink:href='#icons-05')
+											li.active
+												svg
+													use(xlink:href='#icons-05')
+											li
+												svg
+													use(xlink:href='#icons-05')
+											li
+												svg
+													use(xlink:href='#icons-05')
+										span 223 оценки
+										ul.payment-list
+											li.wallet
+												svg
+													use(xlink:href='#icons-03')
+								.bottom-info
+									.flex-container
+										.cell
+											span.cell-header Доставка
+											strong.cell-value бесплатно
+										.cell
+											span.cell-header Мин. заказ
+											strong.cell-value -
+										.cell
+											span.cell-header Время доставки
+											strong.cell-value 30 минут
+										.cell
+											span.cell-header Время работы
+											strong.cell-value 10:00 — 23:00
 			include ../components/footer.pug
