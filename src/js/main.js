@@ -13,11 +13,37 @@ $(document).ready(function () {
 
 	mobileMenu();
 	amountDrop();
+
 	$('.js-show-more').on('click', function(e){
 		e.preventDefault();
 		$(this).parent().addClass('alltext');
 		$(this).remove();
-	})
+	});
+
+	if($( ".slider-range-bar").length){
+		$('.slider-range-bar').each(function(){
+			var $this = $(this);
+			var min = $this.data('min');
+			var max = $this.data('max');
+			$this.slider({
+				range: true,
+				min: min,
+				max: max,
+				values: [ min, max ],
+				create: function( event, ui ) {
+					$this.parent().find('input.min').val(min);
+					$this.parent().find('input.max').val(max);
+				},
+				slide: function( event, ui ) {
+					$this.parent().find('input.min').val(ui.values[0]);
+					$this.parent().find('input.max').val(ui.values[1]);
+				},
+				stop: function( event, ui ) {
+					$this.parent().find('input.min').trigger('change');
+				}
+			});
+		});
+	}
 
 });
 

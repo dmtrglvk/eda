@@ -131,6 +131,9 @@
 .jq-selectbox {
 	vertical-align: middle;
 	cursor: pointer;
+	.filter-row & {
+		width: 172px;
+	}
 }
 .jq-selectbox__select {
 	height: 32px;
@@ -138,6 +141,13 @@
 	border: 1px solid #CCC;
 	box-shadow: inset 1px -1px #F1F1F1, inset -1px 0 #F1F1F1, 0 1px 2px rgba(0,0,0,.1);
 	font: 14px/32px Arial, sans-serif;
+	.filter-row & {
+		height: 24px;
+		border: 0;
+		padding-right: 35px;
+		box-shadow: none;
+		font: 18px/24px @pts-regular;
+	}
 }
 .jq-selectbox.disabled .jq-selectbox__select {
 	border-color: #CCC;
@@ -158,7 +168,6 @@
 	right: 0;
 	width: 34px;
 	height: 100%;
-	border-left: 1px solid #CCC;
 }
 
 .jq-selectbox__dropdown {

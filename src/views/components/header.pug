@@ -38,17 +38,20 @@ header.header
 				a.red-btn(href="#") Универсальный заказ
 	.search-row
 		.container.flex-container
-			.search-wrap.holder
-				select.grey-bg.js-select-style
-					option Санкт-Петербург
-					option Москва
-					option Санкт-Петербург
-				select.js-select-style
-					option Выбрать улицу
-					option ул. Ленина
-					option ул. Пушкина
-				button.red-btn Найти
-					span  рестораны
+			.search-wrap
+				form(action="#")
+					fieldset
+						.holder
+							select.grey-bg.js-select-style
+								option Санкт-Петербург
+								option Москва
+								option Санкт-Петербург
+							select.js-select-style
+								option Выбрать улицу
+								option ул. Ленина
+								option ул. Пушкина
+							button.red-btn Найти
+								span  рестораны
 			a.header-sale(href="#")
 				svg
 					use(xlink:href='#icons-08')

@@ -1,0 +1,137 @@
+doctype html
+html(lang='ru')
+	include ../common/head.pug
+	body
+		.page
+			include ../components/header.pug
+			.content.inner-page
+				.container
+					.filter-row.flex-container
+						ul.filter-list
+							li
+								.checkbox-holder
+									input(type="checkbox" id="new")
+									label(for="new") Новинки
+							li
+								.checkbox-holder
+									input(type="checkbox" id="veg-food")
+									label(for="veg-food") Вегетарианская еда
+							li
+								.checkbox-holder
+									input(type="checkbox" id="sale")
+									label(for="sale") Акции
+						.right-side.flex-container
+							.filter-select
+								select.js-select-style
+									option Сначала новое
+									option Сначала акции
+									option Сначала вегетарианское меню
+							.soc-widget
+								img(src="images/soc-widget.png")
+					.content-wrap
+						.sidebar
+							.sidebar-section.search-box
+								form(action="#")
+									fieldset
+										.holder
+											button.search
+												svg
+													use(xlink:href='#icons-26')
+											input(type="text", placeholder="Название ресторана")
+							.sidebar-section
+								.sidebar-box
+									strong.box-ttl Блюда
+									ul
+										li
+											.checkbox-holder
+												input(type="checkbox" id="filter01")
+												label(for="filter01") Пицца
+										li
+											.checkbox-holder
+												input(type="checkbox" id="filter02")
+												label(for="filter02") Суши
+										li
+											.checkbox-holder
+												input(type="checkbox" id="filter03")
+												label(for="filter03") Бурритос
+										li
+											.checkbox-holder
+												input(type="checkbox" id="filter04")
+												label(for="filter04") Бургеры
+										li
+											.checkbox-holder
+												input(type="checkbox" id="filter05")
+												label(for="filter05") Салаты
+										li
+											.checkbox-holder
+												input(type="checkbox" id="filter06")
+												label(for="filter06") Первые блюда
+										li
+											.checkbox-holder
+												input(type="checkbox" id="filter07")
+												label(for="filter07") Паста
+										li
+											.checkbox-holder
+												input(type="checkbox" id="filter08")
+												label(for="filter08") Лапша
+										li
+											.checkbox-holder
+												input(type="checkbox" id="filter09")
+												label(for="filter09") Морепродукты
+										li
+											.checkbox-holder
+												input(type="checkbox" id="filter10")
+												label(for="filter10") Шашлыки
+										li
+											.checkbox-holder
+												input(type="checkbox" id="filter11")
+												label(for="filter11") Пельмени
+										li
+											.checkbox-holder
+												input(type="checkbox" id="filter12")
+												label(for="filter12") Пироги
+										li
+											.checkbox-holder
+												input(type="checkbox" id="filter13")
+												label(for="filter13") Пончики
+										li
+											.checkbox-holder
+												input(type="checkbox" id="filter14")
+												label(for="filter14") Блины
+										li
+											.checkbox-holder
+												input(type="checkbox" id="filter15")
+												label(for="filter15") Десерты
+								.sidebar-box
+									strong.box-ttl Кухня
+									ul
+										li
+											.checkbox-holder
+												input(type="checkbox" id="filter16")
+												label(for="filter16") Пицца
+										li
+											.checkbox-holder
+												input(type="checkbox" id="filter17")
+												label(for="filter17") Суши
+										li
+											.checkbox-holder
+												input(type="checkbox" id="filter18")
+												label(for="filter03") Бурритос
+										li
+											.checkbox-holder
+												input(type="checkbox" id="filter19")
+												label(for="filter19") Бургеры
+								.sidebar-box
+									strong.box-ttl Сумма заказа
+									.slider-bar
+										.slider-bar-holder
+											.input-holder
+												span от
+												input(type="text" class="min" name="price-min")
+												span р
+											.input-holder
+												span от
+												input(type="text" class="max" name="price-max")
+												span р
+										.slider-range-bar(data-min="100" data-max="10000")
+			include ../components/footer.pug

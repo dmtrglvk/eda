@@ -1,6 +1,7 @@
 @red-color: #c21030;
 @black-color: #0f212b;
 @grey-color: #76989f;
+@grey-light-color: #eef3f4;
 @yellow-color: #f9b848;
 @orange-color: #ff7731;
 @brown-color: #ac4612;
@@ -44,11 +45,53 @@
 	overflow: hidden;
 	.transition(color, 0.5s);
 }
+.shadow() {
+	box-shadow: 0 1px 2px 1px rgba(118, 152, 159, 0.16);
+}
 .item-hover() {
 	&:hover {
 		box-shadow: 0 8px 9px 2px rgba(118, 152, 159, 0.16);
 		.sub-ttl {
 			color: @red-color;
 		}
+	}
+}
+.checkbox-before() {
+	width: 20px;
+	height: 20px;
+	border: 1px solid @black-color;
+	box-sizing: border-box;
+	border-radius: 3px;
+	background-color: @grey-light-color;
+	position: absolute;
+	top: 0;
+	left: 0;
+	content: '';
+}
+.checkbox-after() {
+	background-image: url("../images/sprite.png");
+	background-position: -97px -42px;
+	width: 13px;
+	height: 12px;
+	position: absolute;
+	top: 4px;
+	left: 4px;
+}
+.placeholder() {
+	&::-webkit-input-placeholder {
+		color: @grey-color;
+		text-transform: uppercase;
+	}
+	&::-moz-placeholder {
+		color: @grey-color;
+		text-transform: uppercase;
+	}
+	&:-moz-placeholder {
+		color: @grey-color;
+		text-transform: uppercase;
+	}
+	&:-ms-input-placeholder {
+		color: @grey-color;
+		text-transform: uppercase;
 	}
 }

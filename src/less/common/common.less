@@ -126,4 +126,43 @@ a.red-color {
 		margin: 0 0 20px;
 	}
 }
+.inner-page {
+	background-color: @bg-grey;
+	padding: 30px 0;
+}
+.checkbox-holder {
+	position: relative;
+	label {
+		display: inline-block;
+		padding-left: 32px;
+		cursor: pointer;
+		&:hover {
+			color: @orange-color;
+		}
+		&:before {
+			.checkbox-before();
+		}
+		&:after {
+			.checkbox-after();
+		}
+	}
+	input[type="checkbox"] {
+		position: absolute;
+		top: 0;
+		left: 0;
+		opacity: 0;
+		margin: 0;
+		padding: 0;
+		&:checked + label {
+			&:before {
+				background-color: @orange-color;
+				border-color: @orange-color;
+			}
+			&:after {
+				content: '';
+			}
+		}
+	}
+}
+
 
