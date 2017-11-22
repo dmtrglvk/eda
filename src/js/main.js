@@ -62,16 +62,23 @@ function amountDrop() {
 		newAmount;
 
 	amountOpener.on('click', function(){
-		$(this).parent().find(amountAdjuster).addClass('opened-amountAdjuster').show();
-	});
-	$(document).on('mouseup', function(e){
-		if ($(e.target) != amountOpener && !$('.amount-box').find(e.target).length) {
-			var openedItem = $('.opened-amountAdjuster').closest('.amount-box');
-			newAmount = $('.opened-amountAdjuster').find('input[type=number]').val();
-			openedItem.find(amountValue).text(newAmount);
-			amountAdjuster.removeClass('opened-amountAdjuster').hide();
+		var el = $(this);
+		if(el.parent().find(amountAdjuster).hasClass('opened-amountAdjuster')) {
+			el.parent().find(amountAdjuster).removeClass('opened-amountAdjuster').hide();
+			newAmount = el.parent().find(amountAdjuster).find('input[type=number]').val();
+			el.parent().find(amountValue).text(newAmount);
+		} else {
+			el.parent().find(amountAdjuster).addClass('opened-amountAdjuster').show();
 		}
-	})
+	});
+	// $(document).on('mouseup', function(e){
+	// 	if ($(e.target) != amountOpener && !$('.amount-box').find(e.target).length) {
+	// 		var openedItem = $('.opened-amountAdjuster').closest('.amount-box');
+	// 		newAmount = $('.opened-amountAdjuster').find('input[type=number]').val();
+	// 		openedItem.find(amountValue).text(newAmount);
+	// 		amountAdjuster.removeClass('opened-amountAdjuster').hide();
+	// 	}
+	// })
 }
 
 function sidebarAccordion() {
