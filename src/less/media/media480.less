@@ -96,6 +96,9 @@
 		font-size: 64px;
 		line-height: 68px;
 	}
+	.catalog-holder {
+		display: block;
+	}
 	.catalog-block {
 		.banner {
 			display: none;
@@ -111,11 +114,20 @@
 			font-size: 19px;
 			line-height: 24px;
 		}
+		.inner-page & {
+			width: calc(~"50% - 10px");
+		}
 	}
 	.delivery-item {
 		.rating-row {
-			clear: left;
+			clear: left !important;
 			margin-bottom: 5px;
+		}
+		.top-card & {
+			.sub-ttl {
+				font-size: 28px;
+				line-height: 32px;
+			}
 		}
 	}
 	.footer-area {
@@ -148,6 +160,22 @@
 	.sidebar-filter {
 		li {
 			width: 45%;
+		}
+	}
+	.nav-row {
+		li {
+			font-size: 24px;
+			line-height: 28px;
+			margin-bottom: 5px;
+		}
+	}
+	.nav-menu {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		li {
+			width: calc(~"50% - 20px");
+			margin-right: 0;
 		}
 	}
 }

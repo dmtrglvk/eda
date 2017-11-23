@@ -1,0 +1,321 @@
+doctype html
+html(lang='ru')
+	include ../common/head.pug
+	body
+		.page
+			include ../components/header.pug
+			.content.inner-page
+				.container
+					ul.breadcrumbs
+						li
+							a(href="#") Главная
+						li
+							a(href="#") Доставка еды
+						li
+							a(href="#") Доставка пирогов
+						li Все о пирогах
+					.content-wrap.holder
+						.cols-wrap.left-col
+							.sidebar
+								.sidebar-section.search-box
+									form(action="#")
+										fieldset
+											.holder
+												button.search
+													svg
+														use(xlink:href='#icons-26')
+												input(type="text", placeholder="Название ресторана")
+								.sidebar-section
+									.sidebar-box
+										strong.box-ttl.js-block-opener.opened Японская кухня
+											svg
+												use(xlink:href='#icons-18')
+										.sidebar-info.js-opened-block.opened
+											ul.menu-list
+												li
+													a(href="#") Пицца
+												li
+													a(href="#") Суши
+												li
+													a(href="#") Бурритос
+												li
+													a(href="#") Бургеры
+												li
+													a(href="#") Салаты
+												li
+													a(href="#") Первые блюда
+												li
+													a(href="#") Паста
+												li
+													a(href="#") Лапша
+									.sidebar-box
+										strong.box-ttl.js-block-opener Бургеры
+											svg
+												use(xlink:href='#icons-18')
+										.sidebar-info.js-opened-block
+											ul.menu-list
+												li
+													a(href="#") Пицца
+												li
+													a(href="#") Суши
+												li
+													a(href="#") Бурритос
+									.sidebar-box
+										strong.box-ttl.js-block-opener Салаты
+											svg
+												use(xlink:href='#icons-18')
+										.sidebar-info.js-opened-block
+											ul.menu-list
+												li
+													a(href="#") Пицца
+												li
+													a(href="#") Суши
+												li
+													a(href="#") Бурритос
+									.sidebar-box
+										strong.box-ttl.js-block-opener Обеды
+											svg
+												use(xlink:href='#icons-18')
+										.sidebar-info.js-opened-block
+											ul.menu-list
+												li
+													a(href="#") Пицца
+												li
+													a(href="#") Суши
+												li
+													a(href="#") Бурритос
+							.aside
+								img.content-banner(src="images/banner02.jpg")
+								img.content-banner(src="images/banner03.jpg")
+						.main-content
+							.top-card
+								.delivery-item
+									.top-info.holder
+										.item-logo
+											img(src="images/logo07.jpg")
+										strong.sub-ttl Все о пирогах
+										ul.labels-list
+											li
+												a(href="#") Бургеры
+											li
+												a(href="#") Американская
+										.rating-row
+											ul.rating-list
+												li.active
+													svg
+														use(xlink:href='#icons-05')
+												li.active
+													svg
+														use(xlink:href='#icons-05')
+												li.active
+													svg
+														use(xlink:href='#icons-05')
+												li.active
+													svg
+														use(xlink:href='#icons-05')
+												li.active
+													svg
+														use(xlink:href='#icons-05')
+											span 2123 оценки
+											ul.payment-list
+												li.wallet
+													svg
+														use(xlink:href='#icons-03')
+												li.mastercard
+													svg
+														use(xlink:href='#icons-01')
+												li.visa
+													svg
+														use(xlink:href='#icons-02')
+									.bottom-info
+										.flex-container
+											.cell
+												span.cell-header Доставка
+												strong.cell-value 300 &#x20bd;
+											.cell
+												span.cell-header Мин. заказ
+												strong.cell-value -
+											.cell
+												span.cell-header Время доставки
+												strong.cell-value 60 минут
+											.cell
+												span.cell-header Время работы
+												strong.cell-value 10:00 — 23:00
+									.nav-row.flex-container
+										ul.nav-menu
+											li
+												a.active(href="#") Меню
+											li
+												a(href="#") О ресторане
+											li
+												a(href="#") Акции
+												span 2
+											li
+												a(href="#") Отзывы
+												span 7
+										.soc-widget
+											img(src="images/soc-widget.png")
+							.catalog-wrap.flex-container
+								.catalog-item
+									.tooltip
+										svg
+											use(xlink:href='#icons-27')
+										.tooltip-info
+											p Для создания изысканных суси и роллов наши шеф-повара японской кухни используют лучшие ингредиенты: отборный рис, аутентичные соусы, безупречно свежую рыбу и морепродукты, привезенные прямо из Страны восходящего солнца! Яркие роллы приготовлены по авторскому рецепту "Азбуки Вкуса": их начинка состоит из аппетитного лосося, мягкого сливочно-творожного сыра, хрустящих огурцов и пикантно-острого зеленого лука.
+									a(href="#")
+										img(src="images/img01.jpg")
+										span.sub-ttl Картофель фри стфри
+									.price-row.flex-container
+										strong.price 58 &#x20bd;
+										.amount-box.flex-container
+											span.amount-value.js-amount-opener
+												span.js-amount-value 1
+												|  шт
+												svg.arrow
+													use(xlink:href='#icons-18')
+											a.add-to-cart(href="#")
+												svg
+													use(xlink:href='#icons-10')
+											.drop-count.js-amount-adjuster
+												.number-plus-minus
+													input(type="number", min="1", value="1")
+													span.mark-amount шт
+								.catalog-item
+									.tooltip
+										svg
+											use(xlink:href='#icons-27')
+										.tooltip-info
+											p Для создания изысканных суси и роллов наши шеф-повара японской кухни используют лучшие ингредиенты: отборный рис, аутентичные соусы, безупречно свежую рыбу и морепродукты, привезенные прямо из Страны восходящего солнца! Яркие роллы приготовлены по авторскому рецепту "Азбуки Вкуса": их начинка состоит из аппетитного лосося, мягкого сливочно-творожного сыра, хрустящих огурцов и пикантно-острого зеленого лука.
+									a(href="#")
+										img(src="images/img02.jpg")
+										span.sub-ttl Сандерс
+									.price-row.flex-container
+										strong.price 58 &#x20bd;
+										.amount-box.flex-container
+											span.amount-value.js-amount-opener
+												span.js-amount-value 1
+												|  шт
+												svg.arrow
+													use(xlink:href='#icons-18')
+											a.add-to-cart(href="#")
+												svg
+													use(xlink:href='#icons-10')
+											.drop-count.js-amount-adjuster
+												.number-plus-minus
+													input(type="number", min="1", value="1")
+													span.mark-amount шт
+								.catalog-item
+									.tooltip
+										svg
+											use(xlink:href='#icons-27')
+										.tooltip-info
+											p Для создания изысканных суси и роллов наши шеф-повара японской кухни используют лучшие ингредиенты: отборный рис, аутентичные соусы, безупречно свежую рыбу и морепродукты, привезенные прямо из Страны восходящего солнца! Яркие роллы приготовлены по авторскому рецепту "Азбуки Вкуса": их начинка состоит из аппетитного лосося, мягкого сливочно-творожного сыра, хрустящих огурцов и пикантно-острого зеленого лука.
+									a(href="#")
+										img(src="images/img03.jpg")
+										span.sub-ttl Альфредо
+											span.size
+												|  40 см
+									.price-row.flex-container
+										strong.price 89 &#x20bd;
+										.amount-box.flex-container
+											span.amount-value.js-amount-opener
+												span.js-amount-value 1
+												|  шт
+												svg.arrow
+													use(xlink:href='#icons-18')
+											a.add-to-cart(href="#")
+												svg
+													use(xlink:href='#icons-10')
+											.drop-count.js-amount-adjuster
+												.number-plus-minus
+													input(type="number", min="1", value="1")
+													span.mark-amount шт
+								.catalog-item
+									.tooltip
+										svg
+											use(xlink:href='#icons-27')
+										.tooltip-info
+											p Для создания изысканных суси и роллов наши шеф-повара японской кухни используют лучшие ингредиенты: отборный рис, аутентичные соусы, безупречно свежую рыбу и морепродукты, привезенные прямо из Страны восходящего солнца! Яркие роллы приготовлены по авторскому рецепту "Азбуки Вкуса": их начинка состоит из аппетитного лосося, мягкого сливочно-творожного сыра, хрустящих огурцов и пикантно-острого зеленого лука.
+									a(href="#")
+										img(src="images/img04.jpg")
+										span.sub-ttl Язык с хреном
+									.price-row.flex-container
+										strong.price 420 &#x20bd;
+										.amount-box.flex-container
+											span.amount-value.js-amount-opener
+												span.js-amount-value 1
+												|  шт
+												svg.arrow
+													use(xlink:href='#icons-18')
+											a.add-to-cart(href="#")
+												svg
+													use(xlink:href='#icons-10')
+											.drop-count.js-amount-adjuster
+												.number-plus-minus
+													input(type="number", min="1", value="1")
+													span.mark-amount шт
+								.catalog-item
+									.tooltip
+										svg
+											use(xlink:href='#icons-27')
+										.tooltip-info
+											p Для создания изысканных суси и роллов наши шеф-повара японской кухни используют лучшие ингредиенты: отборный рис, аутентичные соусы, безупречно свежую рыбу и морепродукты, привезенные прямо из Страны восходящего солнца! Яркие роллы приготовлены по авторскому рецепту "Азбуки Вкуса": их начинка состоит из аппетитного лосося, мягкого сливочно-творожного сыра, хрустящих огурцов и пикантно-острого зеленого лука.
+									a(href="#")
+										img(src="images/img05.jpg")
+										span.sub-ttl Язык с хреном
+									.price-row.flex-container
+										strong.price 240 &#x20bd;
+										.amount-box.flex-container
+											span.amount-value.js-amount-opener
+												span.js-amount-value 1
+												|  шт
+												svg.arrow
+													use(xlink:href='#icons-18')
+											a.add-to-cart(href="#")
+												svg
+													use(xlink:href='#icons-10')
+											.drop-count.js-amount-adjuster
+												.number-plus-minus
+													input(type="number", min="1", value="1")
+													span.mark-amount шт
+								.catalog-item
+									.tooltip
+										svg
+											use(xlink:href='#icons-27')
+										.tooltip-info
+											p Для создания изысканных суси и роллов наши шеф-повара японской кухни используют лучшие ингредиенты: отборный рис, аутентичные соусы, безупречно свежую рыбу и морепродукты, привезенные прямо из Страны восходящего солнца! Яркие роллы приготовлены по авторскому рецепту "Азбуки Вкуса": их начинка состоит из аппетитного лосося, мягкого сливочно-творожного сыра, хрустящих огурцов и пикантно-острого зеленого лука.
+									a(href="#")
+										img(src="images/img06.jpg")
+										span.sub-ttl Товары из супермаркета
+									.price-row.flex-container
+										strong.price 50 &#x20bd;
+										.amount-box.flex-container
+											span.amount-value.js-amount-opener
+												span.js-amount-value 1
+												|  шт
+												svg.arrow
+													use(xlink:href='#icons-18')
+											a.add-to-cart(href="#")
+												svg
+													use(xlink:href='#icons-10')
+											.drop-count.js-amount-adjuster
+												.number-plus-minus
+													input(type="number", min="1", value="1")
+													span.mark-amount шт
+							.pagination
+								ul
+									li
+										a.active(href="#") 1
+									li
+										a(href="#") 2
+									li
+										a(href="#") 3
+									li
+										a(href="#") 4
+									li
+										a(href="#") 5
+									li
+										span ...
+									li
+										a(href="#") 13
+			include ../components/footer.pug

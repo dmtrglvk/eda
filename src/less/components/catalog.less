@@ -1,12 +1,13 @@
 .catalog-block {
 	padding: 70px 0 30px;
 	.banner {
-		float: right;
+		//float: right;
 		display: block;
 		padding: 14px;
 		border: 1px solid #d2dddf;
 		border-radius: 3px;
-		width: 268px;
+		flex-basis: 268px;
+		margin-left: 20px;
 		box-sizing: border-box;
 		img {
 			display: block;
@@ -15,17 +16,22 @@
 	}
 }
 .catalog-wrap {
-	float: left;
-	width: calc(~"100% - 312px");
+	//float: left;
+	//width: calc(~"100% - 312px");
 	flex-wrap: wrap;
+	flex: 3 0;
+}
+.catalog-holder {
+	align-items: flex-start;
 }
 .catalog-item {
 	padding: 13px 15px 10px;
-	width: calc(~"33.3333% - 28px");
+	width: calc(~"33.3333% - 14px");
 	box-shadow: 0 1px 3px 1px rgba(118, 152, 159, 0.16);
 	box-sizing: border-box;
+	background-color: #fff;
 	position: relative;
-	margin-bottom: 36px;
+	margin-bottom: 30px;
 	.transition(all, 0.5s);
 	.item-hover();
 	a {
@@ -39,6 +45,13 @@
 	.price {
 		font: 24px/28px @pts-bold;
 		color: @black-color;
+	}
+	&:nth-child(3n) {
+		.tooltip-info {
+			.inner-page & {
+				right: 0;
+			}
+		}
 	}
 }
 .amount-box {

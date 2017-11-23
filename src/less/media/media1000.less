@@ -23,6 +23,15 @@
 	.delivery-item {
 		.rating-row {
 			clear: left;
+			.top-card & {
+				clear: none;
+			}
+		}
+		.top-card & {
+			.sub-ttl {
+				font-size: 36px;
+				line-height: 40px;
+			}
 		}
 	}
 	.feedback-body {
@@ -42,6 +51,19 @@
 	}
 	.catalog-item {
 		width: calc(~"50% - 10px");
+		.tooltip-info {
+			.inner-page & {
+				left:0;
+			}
+		}
+		&:nth-child(2n) {
+			.tooltip-info {
+				.inner-page & {
+					right: 0;
+					left: auto;
+				}
+			}
+		}
 	}
 	.tooltip {
 		.tooltip-info {
@@ -54,9 +76,15 @@
 	.cols-wrap {
 		float: left;
 	}
-	.inner-page {
-		.delivery-wrap {
-			padding: 0 5px 0 20px;
+	.main-content {
+		.catalog-page & {
+			width: calc(~"100% - 285px");
+			padding: 0 0 0 30px;
+		}
+	}
+	.nav-row {
+		.soc-widget {
+			display: none;
 		}
 	}
 }

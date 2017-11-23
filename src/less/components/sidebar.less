@@ -1,6 +1,22 @@
 .sidebar {
 	float: left;
 	width: 285px;
+	.menu-list {
+		li {
+			a {
+				color: @black-color;
+				text-decoration: none;
+				display: block;
+				margin: 0 0 0 -29px;
+				padding: 0 0 0 29px;
+				border-left: 2px solid transparent;
+				&:hover {
+					color: @grey-color;
+					border-left-color: @orange-color;
+				}
+			}
+		}
+	}
 }
 .sidebar-section {
 	padding: 20px 29px;
@@ -139,5 +155,11 @@
 		max-width: 100%;
 		display: block;
 		margin-bottom: 20px;
+	}
+}
+.cols-wrap {
+	&.left-col {
+		float: left;
+		width: 285px;
 	}
 }

@@ -16,6 +16,12 @@
 	a {
 		text-decoration: none;
 	}
+	.top-card & {
+		.sub-ttl {
+			color: @black-color;
+			font: 48px/52px @boomboom;
+		}
+	}
 }
 .promo-code {
 	font: 14px/18px @pts-bold;
@@ -40,8 +46,12 @@
 	min-height: 100px;
 	line-height: 100px;
 	margin-bottom: 15px;
+	.top-card & {
+		width: 32%;
+	}
 	img {
 		vertical-align: middle;
+		max-width: 100%;
 	}
 }
 .labels-list {
