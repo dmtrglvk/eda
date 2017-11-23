@@ -1,0 +1,20 @@
+doctype html
+html(lang='ru')
+	include ../common/head.pug
+	body
+		.page
+			include ../components/header.pug
+			.content.inner-page
+				.container
+					.thanx-box
+						h1 Ваш заказ оформлен!
+						p Спасибо! Номер вашего заказа
+							strong 35483.
+							br
+							| Совсем скоро с вами свяжется наш менеджер.
+						p А еще вы заработали дополнительные бонусы.
+						.bonuses
+							svg
+								use(xlink:href='#icons-15')
+							strong 1740
+			include ../components/footer.pug

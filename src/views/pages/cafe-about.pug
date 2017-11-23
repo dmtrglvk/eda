@@ -1,0 +1,137 @@
+doctype html
+html(lang='ru')
+	include ../common/head.pug
+	body
+		.page
+			include ../components/header.pug
+			.content.inner-page
+				.container
+					ul.breadcrumbs
+						li
+							a(href="#") Главная
+						li
+							a(href="#") Доставка еды
+						li
+							a(href="#") Доставка пирогов
+						li Все о пирогах
+					.content-wrap.holder
+						.cols-wrap.left-col
+							.sidebar
+								.sidebar-section.search-box
+									form(action="#")
+										fieldset
+											.holder
+												button.search
+													svg
+														use(xlink:href='#icons-26')
+												input(type="text", placeholder="Название ресторана")
+								.sidebar-section
+									.sidebar-box
+										strong.box-ttl.js-block-opener.opened Японская кухня
+											svg
+												use(xlink:href='#icons-18')
+										.sidebar-info.js-opened-block.opened
+											ul.menu-list
+												li
+													a(href="#") Пицца
+												li
+													a(href="#") Суши
+												li
+													a(href="#") Бурритос
+												li
+													a(href="#") Бургеры
+												li
+													a(href="#") Салаты
+												li
+													a(href="#") Первые блюда
+												li
+													a(href="#") Паста
+												li
+													a(href="#") Лапша
+							.aside
+								img.content-banner(src="images/banner02.jpg")
+						.main-content
+							.top-card
+								.delivery-item
+									.top-info.holder
+										.item-logo
+											img(src="images/logo07.jpg")
+										strong.sub-ttl Все о пирогах
+										ul.labels-list
+											li
+												a(href="#") Бургеры
+											li
+												a(href="#") Американская
+										.rating-row
+											ul.rating-list
+												li.active
+													svg
+														use(xlink:href='#icons-05')
+												li.active
+													svg
+														use(xlink:href='#icons-05')
+												li.active
+													svg
+														use(xlink:href='#icons-05')
+												li.active
+													svg
+														use(xlink:href='#icons-05')
+												li.active
+													svg
+														use(xlink:href='#icons-05')
+											span 2123 оценки
+											ul.payment-list
+												li.wallet
+													svg
+														use(xlink:href='#icons-03')
+												li.mastercard
+													svg
+														use(xlink:href='#icons-01')
+												li.visa
+													svg
+														use(xlink:href='#icons-02')
+									.bottom-info
+										.flex-container
+											.cell
+												span.cell-header Доставка
+												strong.cell-value 300 &#x20bd;
+											.cell
+												span.cell-header Мин. заказ
+												strong.cell-value -
+											.cell
+												span.cell-header Время доставки
+												strong.cell-value 60 минут
+											.cell
+												span.cell-header Время работы
+												strong.cell-value 10:00 — 23:00
+									.nav-row.flex-container
+										ul.nav-menu
+											li
+												a.active(href="#") Меню
+											li
+												a(href="#") О ресторане
+											li
+												a(href="#") Акции
+												span 2
+											li
+												a(href="#") Отзывы
+												span 7
+										.soc-widget
+											img(src="images/soc-widget.png")
+							.info-block
+								.map
+									iframe(src="https://yandex.ru/map-widget/v1/-/CBafJMh4kA" height="200" frameborder="0")
+								p KFC или в простонародии Ростикс, появился в Нижневартовске относительно недавно, но на сегодняшний день имеет четыре полноценно функционирующих подразделения. Доставкой из сети ресторанов KFC, занимается "Единая служба доставки" Для того что бы ознакомиться с меню функционируют два сайта www.prines.ru и www.buy86.ru, на данных сайтах вы можете не только посмотреть меню и цены, но и оформить заказ не покидая сайта. Курьеры доставят Ваш заказ на дом или офис, достаточно лишь указать при оформлении заказа номер контактного телефона и адрес куда необходимо доставить Ваш заказ. Если у вас есть особые пожелания к заказу, вы можете оставить их в специальном поле появляющимся в момент начала оформления заказа "Комментарий к заказу".
+								p Мы стараемся доставлять заказы в течении часа после их поступления, но иногда заказы поступают в момент когда наши курьеры уже находятся на выезде, в связи с этим время ожидания заказа может увеличиться. Мы с ответственностью относимся к качеству доставляемых блюд из ресторанов KFC, поэтому не формируем поступившие заказы сразу, а только после приезда курьера.
+								p Все пожелания или претензии по качеству работы направлять по адресу:
+									br
+									a(href="#") prines2012@yandex.ru
+									|  или по телефону 601-181
+								.data
+									span ИП Макоева Фатима Константиновна,
+									span ИНН 771900599777, ОГРН 304770001281894
+							.info-block
+								.links-row
+									a.red-btn(href="#") Открыть меню
+									a(href="#") Почитать отзывы
+			include ../components/footer.pug
