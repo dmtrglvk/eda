@@ -1,0 +1,160 @@
+doctype html
+html(lang='ru')
+	include ../common/head.pug
+	body
+		.page
+			include ../components/header.pug
+			.content.inner-page
+				.container
+					ul.breadcrumbs
+						li
+							a(href="#") Главная
+						li
+							a(href="#") Доставка еды
+						li
+							a(href="#") Доставка пирогов
+						li Все о пирогах
+					.content-wrap.holder
+						.cols-wrap.left-col
+							.sidebar
+								.sidebar-section.search-box
+									form(action="#")
+										fieldset
+											.holder
+												button.search
+													svg
+														use(xlink:href='#icons-26')
+												input(type="text", placeholder="Название ресторана")
+								.sidebar-section
+									.sidebar-box
+										strong.box-ttl.js-block-opener.opened Японская кухня
+											svg
+												use(xlink:href='#icons-18')
+										.sidebar-info.js-opened-block.opened
+											ul.menu-list
+												li
+													a(href="#") Пицца
+												li
+													a(href="#") Суши
+												li
+													a(href="#") Бурритос
+												li
+													a(href="#") Бургеры
+												li
+													a(href="#") Салаты
+												li
+													a(href="#") Первые блюда
+												li
+													a(href="#") Паста
+												li
+													a(href="#") Лапша
+									.sidebar-box
+										strong.box-ttl.js-block-opener Бургеры
+											svg
+												use(xlink:href='#icons-18')
+										.sidebar-info.js-opened-block
+											ul.menu-list
+												li
+													a(href="#") Пицца
+												li
+													a(href="#") Суши
+												li
+													a(href="#") Бурритос
+									.sidebar-box
+										strong.box-ttl.js-block-opener Салаты
+											svg
+												use(xlink:href='#icons-18')
+										.sidebar-info.js-opened-block
+											ul.menu-list
+												li
+													a(href="#") Пицца
+												li
+													a(href="#") Суши
+												li
+													a(href="#") Бурритос
+									.sidebar-box
+										strong.box-ttl.js-block-opener Обеды
+											svg
+												use(xlink:href='#icons-18')
+										.sidebar-info.js-opened-block
+											ul.menu-list
+												li
+													a(href="#") Пицца
+												li
+													a(href="#") Суши
+												li
+													a(href="#") Бурритос
+							.aside
+								img.content-banner(src="images/banner02.jpg")
+								img.content-banner(src="images/banner03.jpg")
+						.main-content
+							.top-card
+								.delivery-item
+									.top-info.holder
+										.item-logo
+											img(src="images/logo07.jpg")
+										strong.sub-ttl Все о пирогах
+										ul.labels-list
+											li
+												a(href="#") Бургеры
+											li
+												a(href="#") Американская
+										.rating-row
+											ul.rating-list
+												li.active
+													svg
+														use(xlink:href='#icons-05')
+												li.active
+													svg
+														use(xlink:href='#icons-05')
+												li.active
+													svg
+														use(xlink:href='#icons-05')
+												li.active
+													svg
+														use(xlink:href='#icons-05')
+												li.active
+													svg
+														use(xlink:href='#icons-05')
+											span 2123 оценки
+											ul.payment-list
+												li.wallet
+													svg
+														use(xlink:href='#icons-03')
+												li.mastercard
+													svg
+														use(xlink:href='#icons-01')
+												li.visa
+													svg
+														use(xlink:href='#icons-02')
+									.bottom-info
+										.flex-container
+											.cell
+												span.cell-header Доставка
+												strong.cell-value 300 &#x20bd;
+											.cell
+												span.cell-header Мин. заказ
+												strong.cell-value -
+											.cell
+												span.cell-header Время доставки
+												strong.cell-value 60 минут
+											.cell
+												span.cell-header Время работы
+												strong.cell-value 10:00 — 23:00
+									.nav-row.flex-container
+										ul.nav-menu
+											li
+												a.active(href="#") Меню
+											li
+												a(href="#") О ресторане
+											li
+												a(href="#") Акции
+												span 2
+											li
+												a(href="#") Отзывы
+												span 7
+										.soc-widget
+											img(src="images/soc-widget.png")
+							.sale-block
+								include ../components/sale-block.pug
+			include ../components/footer.pug
