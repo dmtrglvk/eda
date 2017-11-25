@@ -1,0 +1,123 @@
+doctype html
+html(lang='ru')
+	include ../common/head.pug
+	body
+		.page
+			include ../components/header.pug
+			.content.inner-page.none-sidebar
+				.container
+					ul.breadcrumbs
+						li
+							a(href="#") Главная
+						li Акции
+					.content-wrap.holder
+						.main-content
+							.cart-item.flex-container
+								.product.holder
+									.prod-pict
+										a(href="#")
+											img(src="images/img11.jpg")
+									.prod-name
+										a.sub-ttl(href="#") Калифорния
+										span Суши Весла
+								.prod-amount
+									.number-plus-minus
+										input(type="number", min="1", value="1")
+										span.mark-amount шт
+								.prod-price
+									strong 459 &#x20bd;
+								.delete-btn
+									svg
+										use(xlink:href='#icons-23')
+							.cart-item.flex-container
+								.product.holder
+									.prod-pict
+										a(href="#")
+											img(src="images/img12.jpg")
+									.prod-name
+										a.sub-ttl(href="#") О рицу маки
+										span Суши Весла
+								.prod-amount
+									.number-plus-minus
+										input(type="number", min="1", value="1")
+										span.mark-amount шт
+								.prod-price
+									strong 4590 &#x20bd;
+								.delete-btn
+									svg
+										use(xlink:href='#icons-23')
+							.cart-item.flex-container
+								.product.holder
+									.prod-pict
+										a(href="#")
+											img(src="images/img13.jpg")
+									.prod-name
+										a.sub-ttl(href="#") Чизбургер
+										span Макдональдс
+								.prod-amount
+									.number-plus-minus
+										input(type="number", min="1", value="1")
+										span.mark-amount шт
+								.prod-price
+									strong 490 &#x20bd;
+								.delete-btn
+									svg
+										use(xlink:href='#icons-23')
+							.total-row.flex-container
+								.left-info
+									span Вы заработаете:
+									svg
+										use(xlink:href='#icons-15')
+									strong 1740
+								.center-info
+									span Доставка: 440 &#x20bd;
+								.right-info
+									span Наценка за вес: 100 &#x20bd;
+							.box
+								form(action="#")
+									fieldset
+										h3 Доставка заказа
+										.holder
+											.left-side
+												.form-row.holder
+													select
+														option Санкт-Петербург
+														option Санкт-Петербург
+														option Санкт-Петербург
+													input(type="text", placeholder="Адрес доставки")
+												.form-row
+													input(type="text", placeholder="Ваше имя")
+													input(type="tel", placeholder="")
+												.form-row
+													select
+														option Сегодня 31.10
+														option Сегодня 30.10
+														option Сегодня 29.10
+													select
+														option с 10:00
+														option с 11:00
+														option с 12:00
+													select
+														option до 22:00
+														option до 21:00
+														option до 20:00
+											.right-side
+												textarea(placeholder="Дополнительная информация: номер офиса или квартиры, названиекомпании и тд.")
+										h3 Оплата
+										.holder
+											.left-side
+												ul
+													li
+														input(type="radio" name="payment-way" id="radio-btn-1")
+														label(for="radio-btn-1") Онлайн картой
+													li
+														input(type="radio" name="payment-way" id="radio-btn-2")
+														label(for="radio-btn-2") У курьера картой
+													li
+														input(type="radio" name="payment-way" id="radio-btn-3")
+														label(for="radio-btn-3") У курьера наличными
+											.right-side
+												input(type="text", placeholder="Нужна сдача с")
+												span.rub &#x20bd;
+				include ../components/description-block.pug
+			include ../components/footer.pug
