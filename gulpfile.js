@@ -91,7 +91,6 @@ gulp.task('pug', function() {
 			pretty: true
 		}))
 		.pipe(gulp.dest('./web/'))
-		.pipe(reload({stream:true}));
 });
 
 gulp.task('less', function () {

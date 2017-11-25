@@ -1,0 +1,65 @@
+doctype html
+html(lang='ru')
+	include ../common/head.pug
+	body
+		.page
+			include ../components/header.pug
+			.content.inner-page.none-sidebar
+				.container
+					ul.breadcrumbs
+						li
+							a(href="#") Главная
+						li Акции
+					.content-wrap.holder
+						.main-content
+							.order-container
+								.box
+									.flex-container
+										.order-col
+											h2 Оформление универсального заказа
+											.flex-container
+												.col
+													.radio-holder
+														input(type="radio", id="radio1", name="radio-group1" checked)
+														label(for="radio1") Пешком
+													.radio-holder
+														input(type="radio", id="radio2", name="radio-group1")
+														label(for="radio2") На авто
+												.col
+													.radio-holder
+														input(type="radio", id="radio3", name="radio-group2" checked)
+														label(for="radio3") До 5 кг
+													.radio-holder
+														input(type="radio", id="radio4", name="radio-group2")
+														label(for="radio4") До 10 кг
+													.radio-holder
+														input(type="radio", id="radio5", name="radio-group2")
+														label(for="radio5") До 15 кг
+									.flex-container
+										.order-col
+											h3 Откуда
+											input(type="text", placeholder="Укажите адрес", class="geo large")
+											.flex-container
+												input(type="text", placeholder="Укажите адрес", class="small")
+												select.js-select-style
+													option Сегодня 31.10
+													option Завтра 01.11
+													option Когда-нибудь
+												select.js-select-style
+													option с 10:00
+													option с 15:00
+													option с 00:00
+												select.js-select-style
+													option до 15:00
+													option до 22:00
+													option до 01:00
+											.more-info-link.js-more-info-opener Указывать контактное лицо
+											.more-info-block.js-more-info-block
+												.flex-container
+													input(type="text", placeholder="Контактное лицо", class="medium")
+													input(type="text", placeholder="Внутренний номер заказа", class="medium")
+										.order-col
+											textarea(placeholder="Дополнительная информация", class="large")
+
+				include ../components/description-block.pug
+			include ../components/footer.pug

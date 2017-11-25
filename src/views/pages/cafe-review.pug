@@ -306,16 +306,10 @@ html(lang='ru')
 													li
 											.r-side
 												span Будете рекомендовать?
-												select
-													option
-														span.mark.like
-															svg
-																use(xlink:href='#icons-07')
+												select.js-select-style
+													option.yes
 														| Да
-													option
-														span.mark.dislike
-															svg
-																use(xlink:href='#icons-07')
+													option.no
 														| Нет
 										.comment
 											textarea(placeholder="Опишите свои впечатления")
