@@ -1,0 +1,119 @@
+doctype html
+html(lang='ru')
+	include ../common/head.pug
+	body
+		.page
+			include ../components/header.pug
+			.content.inner-page.none-sidebar
+				.container
+					ul.breadcrumbs
+						li
+							a(href="#") Главная
+						li Акции
+					.content-wrap.holder
+						.main-content
+							.text-content
+								.section
+									h3 Что делать с бонусными баллами?
+									p Заказывайте через наш сервис и получайте бонусные баллы. Бонусные баллы можно использовать при новых заказах,
+										br
+										| получать за них подарки от нас.
+									p Вы можете обменять бонусные баллы на промокоды!
+								.section
+									h3 Как получить бонусные баллы?
+									.bonuses-wrap.flex-container
+										.bonus-item
+											.points.discount
+												svg
+													use(xlink:href='#icons-04')
+												strong 10
+											.text
+												p вы получаете на бонусный счет при оформлении заказа
+										.bonus-item
+											.points.gift
+												svg
+													use(xlink:href='#icons-15')
+												strong 5
+											.text
+												p.disabled за каждую минуту опоздания при доставке
+												p СКОРО!
+										.bonus-item
+											.points.gift
+												svg
+													use(xlink:href='#icons-15')
+												strong 25
+											.text
+												p За каждый оставленный отзыв
+										.bonus-item
+											.points.gift
+												svg
+													use(xlink:href='#icons-15')
+												strong 50
+											.text
+												p.disabled За каждого приглашенного друга по реферальной ссылке
+												p СКОРО!
+										.bonus-item
+											.points.gift
+												svg
+													use(xlink:href='#icons-15')
+												strong 250
+											.text
+												p Просто за регистрацию в нашем сервисе!
+										.bonus-item
+											.points.gift
+												svg
+													use(xlink:href='#icons-15')
+												strong 500
+											.text
+												p За качественный обзор нашего сервиса в социальных сетях
+								.section.section-row
+									h3 Расскажите друзьям!
+									.soc-widget
+										img(src="images/soc-widget.png")
+							.promocodes
+								h1 Каталог промокодов
+								p Для обмена бонусных балов на подарки вам необходимо
+									a.red-color(href="#")  авторизоваться
+								.promo-wrap.flex-container
+									.white-box
+										strong.ttl Промокод
+										p В любой ресторан
+										span на 2 месяца
+										.grey-box.holder
+											a.red-btn(href="#") Получить
+											.points-amount
+												svg
+													use(xlink:href='#icons-15')
+												span 250
+									.white-box
+										strong.ttl Промокод
+										p В любой ресторан
+										span на 2 месяца
+										.grey-box.holder
+											a.red-btn(href="#") Получить
+											.points-amount
+												svg
+													use(xlink:href='#icons-15')
+												span 500
+									.white-box
+										strong.ttl Промокод
+										p В любой ресторан
+										span на 2 месяца
+										.grey-box.holder
+											a.red-btn(href="#") Получить
+											.points-amount
+												svg
+													use(xlink:href='#icons-15')
+												span 1000
+									.white-box
+										strong.ttl Промокод
+										p В любой ресторан
+										span на 2 месяца
+										.grey-box.holder
+											a.red-btn(href="#") Получить
+											.points-amount
+												svg
+													use(xlink:href='#icons-15')
+												span 2000
+				include ../components/description-block.pug
+			include ../components/footer.pug
