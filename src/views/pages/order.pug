@@ -85,6 +85,20 @@ html(lang='ru')
 													input(type="text", placeholder="Внутренний номер заказа", class="medium")
 										.order-col
 											textarea(placeholder="Дополнительная информация", class="large")
+									.flex-container
+										.order-col
+											h3 Что везем
+											input(type="text", placeholder="Укажите адрес", class="large")
+											ul.suggestions
+												li Документы
+												li Продукты
+												li Подарок
+												li Цветы
+												li Торты
+										.order-col
+											.set-price-box
+												input(type="text", class="small")
+												span.currency &#x20bd;
 
 				include ../components/description-block.pug
 			include ../components/footer.pug

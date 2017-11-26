@@ -56,4 +56,38 @@
 	.more-info-block {
 		display: none;
 	}
+	.suggestions {
+		li {
+			display: inline-block;
+			position: relative;
+			vertical-align: top;
+			color: @red-color;
+			margin: 0 0 0 20px;
+			cursor: pointer;
+			&:first-child {
+				margin: 0;
+			}
+			&:after {
+				content:"";
+				position: absolute;
+				bottom:4px;
+				left: 0;
+				width: 100%;
+				border-bottom: 1px dashed fade(@red-color, 30%);
+			}
+		}
+	}
+	.set-price-box {
+		position: relative;
+		display: inline-block;
+		.currency {
+			position: absolute;
+			top:10px;
+			right:10px;
+		}
+		input {
+			margin: 0;
+			padding-right: 25px;
+		}
+	}
 }
