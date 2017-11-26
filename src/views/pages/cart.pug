@@ -73,51 +73,52 @@ html(lang='ru')
 									span Доставка: 440 &#x20bd;
 								.right-info
 									span Наценка за вес: 100 &#x20bd;
-							.box
-								form(action="#")
-									fieldset
-										h3 Доставка заказа
-										.holder
-											.left-side
-												.form-row.holder
-													select
-														option Санкт-Петербург
-														option Санкт-Петербург
-														option Санкт-Петербург
-													input(type="text", placeholder="Адрес доставки")
-												.form-row
-													input(type="text", placeholder="Ваше имя")
-													input(type="tel", placeholder="")
-												.form-row
-													select
-														option Сегодня 31.10
-														option Сегодня 30.10
-														option Сегодня 29.10
-													select
-														option с 10:00
-														option с 11:00
-														option с 12:00
-													select
-														option до 22:00
-														option до 21:00
-														option до 20:00
-											.right-side
-												textarea(placeholder="Дополнительная информация: номер офиса или квартиры, названиекомпании и тд.")
-										h3 Оплата
-										.holder
-											.left-side
-												ul
-													li
-														input(type="radio" name="payment-way" id="radio-btn-1")
-														label(for="radio-btn-1") Онлайн картой
-													li
-														input(type="radio" name="payment-way" id="radio-btn-2")
-														label(for="radio-btn-2") У курьера картой
-													li
-														input(type="radio" name="payment-way" id="radio-btn-3")
-														label(for="radio-btn-3") У курьера наличными
-											.right-side
-												input(type="text", placeholder="Нужна сдача с")
-												span.rub &#x20bd;
+							.form-container
+								.box
+									form(action="#")
+										fieldset
+											h3 Доставка заказа
+											.flex-container
+												.form-col
+													.form-row.holder
+														select.js-select-style
+															option Санкт-Петербург
+															option Санкт-Петербург
+															option Санкт-Петербург
+														input(type="text", placeholder="Адрес доставки")
+													.form-row
+														input(type="text", placeholder="Ваше имя")
+														input.mask(type="text", placeholder="+7  916  142-57-92")
+													.form-row
+														select.js-select-style
+															option Сегодня 31.10
+															option Сегодня 30.10
+															option Сегодня 29.10
+														select.js-select-style
+															option с 10:00
+															option с 11:00
+															option с 12:00
+														select.js-select-style
+															option до 22:00
+															option до 21:00
+															option до 20:00
+												.form-col
+													textarea(placeholder="Дополнительная информация: номер офиса или квартиры, названиекомпании и тд.")
+											h3 Оплата
+											.flex-container
+												.form-col
+													.radio-holder
+														input(type="radio", id="radio6", name="radio-group3" checked)
+														label(for="radio6") Онлайн картой
+													.radio-holder
+														input(type="radio", id="radio7", name="radio-group3")
+														label(for="radio7") У курьера картой
+													.radio-holder
+														input(type="radio", id="radio8", name="radio-group3")
+														label(for="radio8") У курьера наличными
+												.form-col
+													.set-price-box
+														input(type="text", placeholder="Нужна сдача с")
+														span.currency &#x20bd;
 				include ../components/description-block.pug
 			include ../components/footer.pug
