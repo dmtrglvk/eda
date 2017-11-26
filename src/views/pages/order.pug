@@ -14,91 +14,108 @@ html(lang='ru')
 						.main-content
 							.form-container
 								.box
-									.flex-container
-										.form-col
-											h2 Оформление универсального заказа
-											.flex-container
-												.col
-													.radio-holder
-														input(type="radio", id="radio1", name="radio-group1" checked)
-														label(for="radio1") Пешком
-													.radio-holder
-														input(type="radio", id="radio2", name="radio-group1")
-														label(for="radio2") На авто
-												.col
-													.radio-holder
-														input(type="radio", id="radio3", name="radio-group2" checked)
-														label(for="radio3") До 5 кг
-													.radio-holder
-														input(type="radio", id="radio4", name="radio-group2")
-														label(for="radio4") До 10 кг
-													.radio-holder
-														input(type="radio", id="radio5", name="radio-group2")
-														label(for="radio5") До 15 кг
-									.flex-container
-										.form-col
-											h3 Откуда
-											input(type="text", placeholder="Укажите адрес", class="geo large")
-											.flex-container
-												input(type="text", placeholder="+7 916 123-45-67", class="small mask")
-												select.js-select-style
-													option Сегодня 31.10
-													option Завтра 01.11
-													option Когда-нибудь
-												select.js-select-style
-													option с 10:00
-													option с 15:00
-													option с 00:00
-												select.js-select-style
-													option до 15:00
-													option до 22:00
-													option до 01:00
-											.more-info-link.js-more-info-opener.opened Не указывать контактное лицо
-											.more-info-block.js-more-info-block
+									form(action="#")
+										fieldset
+											.flex-container.form-block
+												.form-col
+													h2 Оформление универсального заказа
+													.flex-container.form-block
+														.col
+															.radio-holder
+																input(type="radio", id="radio1", name="radio-group1" checked)
+																label(for="radio1") Пешком
+															.radio-holder
+																input(type="radio", id="radio2", name="radio-group1")
+																label(for="radio2") На авто
+														.col
+															.radio-holder
+																input(type="radio", id="radio3", name="radio-group2" checked)
+																label(for="radio3") До 5 кг
+															.radio-holder
+																input(type="radio", id="radio4", name="radio-group2")
+																label(for="radio4") До 10 кг
+															.radio-holder
+																input(type="radio", id="radio5", name="radio-group2")
+																label(for="radio5") До 15 кг
+											.flex-container.form-block
+												.form-col
+													h3 Откуда
+													input(type="text", placeholder="Укажите адрес", class="geo large")
+													.flex-container
+														input(type="text", placeholder="+7 916 123-45-67", class="small mask")
+														select.js-select-style
+															option Сегодня 31.10
+															option Завтра 01.11
+															option Когда-нибудь
+														select.js-select-style
+															option с 10:00
+															option с 15:00
+															option с 00:00
+														select.js-select-style
+															option до 15:00
+															option до 22:00
+															option до 01:00
+													.more-info-link.js-more-info-opener.opened Не указывать контактное лицо
+													.more-info-block.js-more-info-block
+														.flex-container
+															input(type="text", placeholder="Контактное лицо", class="medium")
+															input(type="text", placeholder="Внутренний номер заказа", class="medium")
+												.form-col
+													textarea(placeholder="Дополнительная информация", class="large")
+											.flex-container.form-block
+												.form-col
+													h3 Куда
+													input(type="text", placeholder="Укажите адрес", class="geo large")
+													.flex-container
+														input(type="text", placeholder="+7 916 123-45-67", class="small mask")
+														select.js-select-style
+															option Сегодня 31.10
+															option Завтра 01.11
+															option Когда-нибудь
+														select.js-select-style
+															option с 10:00
+															option с 15:00
+															option с 00:00
+														select.js-select-style
+															option до 15:00
+															option до 22:00
+															option до 01:00
+													.more-info-link.js-more-info-opener Не указывать контактное лицо
+													.more-info-block.js-more-info-block
+														.flex-container
+															input(type="text", placeholder="Контактное лицо", class="medium")
+															input(type="text", placeholder="Внутренний номер заказа", class="medium")
+												.form-col
+													textarea(placeholder="Дополнительная информация", class="large")
+											.flex-container.form-block
+												.form-col
+													h3 Что везем
+													input(type="text", placeholder="Укажите адрес", class="large")
+													ul.suggestions
+														li Документы
+														li Продукты
+														li Подарок
+														li Цветы
+														li Торты
+												.form-col
+													.set-price-box
+														input(type="text", class="small")
+														span.currency &#x20bd;
+													.value-info
+														span Укажите ценность
+														.tooltip
+															svg
+																use(xlink:href='#icons-27')
+															.tooltip-info
+																p Для создания изысканных суси и роллов наши шеф-повара японской кухни используют лучшие ингредиенты: отборный рис, аутентичные соусы, безупречно свежую рыбу и морепродукты, привезенные прямо из Страны восходящего солнца! Яркие роллы приготовлены по авторскому рецепту "Азбуки Вкуса": их начинка состоит из аппетитного лосося, мягкого сливочно-творожного сыра, хрустящих огурцов и пикантно-острого зеленого лука.
+											.result-row
 												.flex-container
-													input(type="text", placeholder="Контактное лицо", class="medium")
-													input(type="text", placeholder="Внутренний номер заказа", class="medium")
-										.form-col
-											textarea(placeholder="Дополнительная информация", class="large")
-									.flex-container
-										.form-col
-											h3 Куда
-											input(type="text", placeholder="Укажите адрес", class="geo large")
-											.flex-container
-												input(type="text", placeholder="+7 916 123-45-67", class="small mask")
-												select.js-select-style
-													option Сегодня 31.10
-													option Завтра 01.11
-													option Когда-нибудь
-												select.js-select-style
-													option с 10:00
-													option с 15:00
-													option с 00:00
-												select.js-select-style
-													option до 15:00
-													option до 22:00
-													option до 01:00
-											.more-info-link.js-more-info-opener Не указывать контактное лицо
-											.more-info-block.js-more-info-block
-												.flex-container
-													input(type="text", placeholder="Контактное лицо", class="medium")
-													input(type="text", placeholder="Внутренний номер заказа", class="medium")
-										.form-col
-											textarea(placeholder="Дополнительная информация", class="large")
-									.flex-container
-										.form-col
-											h3 Что везем
-											input(type="text", placeholder="Укажите адрес", class="large")
-											ul.suggestions
-												li Документы
-												li Продукты
-												li Подарок
-												li Цветы
-												li Торты
-										.form-col
-											.set-price-box
-												input(type="text", class="small")
-												span.currency &#x20bd;
-
+													.form-col.flex-container
+														ul
+															li Доставка: 440 &#x20bd;
+															li Наценка за вес: 100 &#x20bd;
+														strong Итого: 1740 &#x20bd;
+													.form-col
+														a.red-btn(href="#") Отправить заявку
 				include ../components/description-block.pug
 			include ../components/footer.pug

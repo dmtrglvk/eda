@@ -249,4 +249,148 @@
 			}
 		}
 	}
+	.cart-item {
+		flex-wrap: wrap;
+		.product {
+			width: 100%;
+			margin-bottom: 10px;
+		}
+	}
+	.total-row {
+		display: block;
+		text-align: center;
+		& > div {
+			margin-bottom: 10px;
+		}
+	}
+	.radio-block {
+		.radio-holder {
+			width: 100%;
+			display: block;
+			margin: -2px 0 0;
+			&:first-of-type {
+				label {
+					border-radius: 4px 4px 0 0;
+				}
+			}
+			&:last-of-type {
+				label {
+					border-radius: 0 0 4px 4px;
+				}
+			}
+		}
+	}
+	.form-container {
+		.geo-row {
+			.jq-selectbox {
+				float: none;
+				width: 100%;
+				margin-bottom: 10px;
+				.jq-selectbox__select {
+					border-radius: 3px;
+				}
+			}
+			input[type="text"] {
+				&.geo {
+					width: 100%;
+					border-left: 1px solid @black-color;
+					border-radius: 3px;
+				}
+			}
+		}
+		.set-price-box {
+			width: 100%;
+			input[type="text"] {
+				width: 100%;
+			}
+		}
+		.form-row {
+			flex-wrap: wrap;
+			.jq-selectbox {
+				&.medium {
+					width: 100%;
+					margin: 0 0 10px;
+				}
+				&.quarter {
+					width: calc(~"50% - 5px");
+				}
+			}
+		}
+		.result-row {
+			&.cart-result {
+				.flex-container {
+					display: block;
+					text-align: center;
+				}
+			}
+			&>.flex-container {
+				display: block;
+			}
+			strong {
+				display: block;
+				font-size: 28px;
+				line-height: 32px;
+				margin-bottom: 10px;
+			}
+			.red-btn {
+				display: block;
+			}
+			.form-col {
+				&:nth-child(1){
+					width: 100%;
+					margin: 0 0 10px;
+				}
+			}
+		}
+		.flex-container {
+			.flex-container {
+				flex-wrap: wrap;
+			}
+			.jq-selectbox,
+			input[type="text"].small {
+				width: calc(~"50% - 5px");
+				margin: 0 0 10px;
+			}
+			.set-price-box {
+				input[type="text"].small {
+					width: 100%;
+				}
+			}
+			.jq-selectbox.large {
+				width:100%;
+			}
+		}
+		.suggestions {
+			li {
+				margin: 0 0 0 10px;
+			}
+		}
+		.value-info {
+			padding: 0;
+			.tooltip {
+				.tooltip-info {
+					left: -90px;
+					bottom: 20px;
+				}
+			}
+		}
+	}
+	.form-block {
+		.form-col {
+			.col {
+				margin: 0 0 20px;
+				width:100%;
+				display: flex;
+				&>* {
+					width:calc(~"50% + 6px");
+					margin: 0 -3px;
+					text-align: center;
+					label {
+						width:100%;
+						box-sizing: border-box;
+					}
+				}
+			}
+		}
+	}
 }

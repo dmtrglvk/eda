@@ -77,48 +77,55 @@ html(lang='ru')
 								.box
 									form(action="#")
 										fieldset
-											h3 Доставка заказа
-											.flex-container
+											.flex-container.form-block
 												.form-col
-													.form-row.holder
-														select.js-select-style
+													h3 Доставка заказа
+													.form-row.holder.geo-row
+														select.js-select-style.large
 															option Санкт-Петербург
 															option Санкт-Петербург
 															option Санкт-Петербург
-														input(type="text", placeholder="Адрес доставки")
-													.form-row
-														input(type="text", placeholder="Ваше имя")
-														input.mask(type="text", placeholder="+7  916  142-57-92")
-													.form-row
-														select.js-select-style
+														input.geo(type="text", placeholder="Адрес доставки")
+													.form-row.flex-container.half-width
+														input.medium(type="text", placeholder="Ваше имя")
+														input.mask.medium(type="text", placeholder="+7  916  142-57-92")
+													.form-row.flex-container
+														select.js-select-style.medium
 															option Сегодня 31.10
 															option Сегодня 30.10
 															option Сегодня 29.10
-														select.js-select-style
+														select.js-select-style.quarter
 															option с 10:00
 															option с 11:00
 															option с 12:00
-														select.js-select-style
+														select.js-select-style.quarter
 															option до 22:00
 															option до 21:00
 															option до 20:00
 												.form-col
 													textarea(placeholder="Дополнительная информация: номер офиса или квартиры, названиекомпании и тд.")
-											h3 Оплата
-											.flex-container
+											.flex-container.form-block
 												.form-col
-													.radio-holder
-														input(type="radio", id="radio6", name="radio-group3" checked)
-														label(for="radio6") Онлайн картой
-													.radio-holder
-														input(type="radio", id="radio7", name="radio-group3")
-														label(for="radio7") У курьера картой
-													.radio-holder
-														input(type="radio", id="radio8", name="radio-group3")
-														label(for="radio8") У курьера наличными
+													h3 Оплата
+													.radio-block
+														.radio-holder
+															input(type="radio", id="radio6", name="radio-group3" checked)
+															label(for="radio6") Онлайн картой
+														.radio-holder
+															input(type="radio", id="radio7", name="radio-group3")
+															label(for="radio7") У курьера картой
+														.radio-holder
+															input(type="radio", id="radio8", name="radio-group3")
+															label(for="radio8") У курьера наличными
 												.form-col
 													.set-price-box
 														input(type="text", placeholder="Нужна сдача с")
 														span.currency &#x20bd;
+											.result-row.cart-result
+												.flex-container
+													.form-col.flex-container
+														strong Итого: 1740 &#x20bd;
+													.form-col
+														a.red-btn(href="#") Отправить заявку
 				include ../components/description-block.pug
 			include ../components/footer.pug
