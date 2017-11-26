@@ -17,6 +17,7 @@ $(document).ready(function () {
 	mobileMenu();
 	amountDrop();
 	sidebarAccordion();
+	slideBlock('Не указывать контактное лицо', 'Указывать контактное лицо');
 
 	$('.js-show-more').on('click', function(e){
 		e.preventDefault();
@@ -46,6 +47,11 @@ $(document).ready(function () {
 					$this.parent().find('input.min').trigger('change');
 				}
 			});
+		});
+	}
+	if($('input.mask').length) {
+		$('input.mask').inputmask({
+			mask: '+7 999 999-99-99'
 		});
 	}
 
@@ -94,3 +100,26 @@ function sidebarAccordion() {
 	})
 }
 
+function slideBlock(openedText, closedText) {
+	var opener = $('.js-more-info-opener'),
+		slide = $('.js-more-info-block');
+
+	opener.each(function(){
+		var el = $(this);
+		if(el.hasClass('opened')) {
+			el.text(openedText);
+			el.next(slide).show();
+		} else {
+			el.text(closedText);
+		}
+	});
+
+	opener.on('click', function(){
+		var el = $(this);
+		if(el.hasClass('opened')) {
+			el.text(closedText).removeClass('opened').next(slide).slideUp(300);
+		} else {
+			el.text(openedText).addClass('opened').next(slide).slideDown(300);
+		}
+	});
+}

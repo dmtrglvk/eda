@@ -40,7 +40,7 @@ html(lang='ru')
 											h3 Откуда
 											input(type="text", placeholder="Укажите адрес", class="geo large")
 											.flex-container
-												input(type="text", placeholder="Укажите адрес", class="small")
+												input(type="text", placeholder="+7 916 123-45-67", class="small mask")
 												select.js-select-style
 													option Сегодня 31.10
 													option Завтра 01.11
@@ -53,7 +53,32 @@ html(lang='ru')
 													option до 15:00
 													option до 22:00
 													option до 01:00
-											.more-info-link.js-more-info-opener Указывать контактное лицо
+											.more-info-link.js-more-info-opener.opened Не указывать контактное лицо
+											.more-info-block.js-more-info-block
+												.flex-container
+													input(type="text", placeholder="Контактное лицо", class="medium")
+													input(type="text", placeholder="Внутренний номер заказа", class="medium")
+										.order-col
+											textarea(placeholder="Дополнительная информация", class="large")
+									.flex-container
+										.order-col
+											h3 Куда
+											input(type="text", placeholder="Укажите адрес", class="geo large")
+											.flex-container
+												input(type="text", placeholder="+7 916 123-45-67", class="small mask")
+												select.js-select-style
+													option Сегодня 31.10
+													option Завтра 01.11
+													option Когда-нибудь
+												select.js-select-style
+													option с 10:00
+													option с 15:00
+													option с 00:00
+												select.js-select-style
+													option до 15:00
+													option до 22:00
+													option до 01:00
+											.more-info-link.js-more-info-opener Не указывать контактное лицо
 											.more-info-block.js-more-info-block
 												.flex-container
 													input(type="text", placeholder="Контактное лицо", class="medium")

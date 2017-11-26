@@ -32,4 +32,28 @@
 		margin: 0;
 		height: 90px;
 	}
+	.more-info-link {
+		display: inline-block;
+		position: relative;
+		vertical-align: top;
+		color: @red-color;
+		padding: 0 0 0 23px;
+		margin: 0 0 5px 17px;
+		cursor: pointer;
+		background: url('../images/sprite.png') -96px -53px no-repeat;
+		&:after {
+			content:"";
+			position: absolute;
+			bottom:4px;
+			left: 23px;
+			width: calc(~"100% - 23px");
+			border-bottom: 1px dashed fade(@red-color, 30%);
+		}
+		&.opened {
+			background: url('../images/sprite.png') -96px -74px no-repeat;
+		}
+	}
+	.more-info-block {
+		display: none;
+	}
 }
