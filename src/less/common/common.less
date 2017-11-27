@@ -53,21 +53,27 @@ body > svg {
 }
 .content {
 	h1 {
-		text-align: center;
 		font: 48px/52px @boomboom;
-		position: relative;
 		color: @black-color;
-		margin-bottom: 50px;
-		&:after {
-			background-image: url('../images/sprite.png');
-			background-position: 0 -112px;
-			width: 45px;
-			height: 7px;
-			position: absolute;
-			left: 50%;
-			margin-left: -22px;
-			bottom: -14px;
-			content: '';
+		margin-bottom: 20px;
+		&.style-h1 {
+			text-align: center;
+			position: relative;
+			margin-bottom: 50px;
+			&:after {
+				background-image: url('../images/sprite.png');
+				background-position: 0 -112px;
+				width: 45px;
+				height: 7px;
+				position: absolute;
+				left: 50%;
+				margin-left: -22px;
+				bottom: -14px;
+				content: '';
+			}
+			.error-page& {
+				color: @red-color;
+			}
 		}
 	}
 	h2 {
@@ -93,6 +99,18 @@ body > svg {
 	border: 5px solid @yellow-color;
 	border-radius: 3px;
 	padding: 15px 25px 25px;
+	img {
+		display: block;
+		margin-right: 25px;
+	}
+	p {
+		.text-content & {
+			margin: 0;
+		}
+	}
+	.section & {
+		margin-bottom: 15px;
+	}
 }
 .category {
 	font: 28px/32px @boomboom;
@@ -494,19 +512,29 @@ a.red-color {
 	p {
 		margin: 0 0 20px;
 	}
-	h3 {
-		font-size: 32px;
-		line-height: 36px;
-	}
 	.section {
 		padding-bottom: 20px;
 		&.section-row {
 			& > * {
 				display: inline-block;
 				vertical-align: middle;
-			}
-			h3 {
 				margin-bottom: 0;
+			}
+		}
+	}
+	ul {
+		li {
+			margin-bottom: 10px;
+			padding-left: 20px;
+			position: relative;
+			&:after {
+				background-color: @red-color;
+				width: 10px;
+				height: 1px;
+				position: absolute;
+				left: 0;
+				top: 11px;
+				content: '';
 			}
 		}
 	}
@@ -605,6 +633,16 @@ a.red-color {
 		.points-amount {
 			display: inline-block;
 			margin-top: 10px;
+		}
+	}
+}
+.pict-container {
+	margin-bottom: 20px;
+	.col {
+		width: calc(~"50% - 15px");
+		img {
+			width: 100%;
+			display: block;
 		}
 	}
 }
