@@ -104,3 +104,98 @@
 		font-family: @pts-regular;
 	}
 }
+.rating {
+	margin-bottom: 10px;
+	ul {
+		display: inline-block;
+		padding-left: 5px;
+	}
+	li {
+		display: inline-block;
+		margin: 0 2px;
+		vertical-align: middle;
+		cursor: pointer;
+		svg {
+			width: 20px;
+			height: 19px;
+			fill: #fff;
+			stroke: #000;
+		}
+		&.active {
+			svg {
+				fill: @orange-color;
+				stroke: @orange-color;
+			}
+		}
+	}
+}
+.feedback-box {
+	.r-side {
+		margin-bottom: 10px;
+		& > span {
+			display: inline-block;
+			vertical-align: middle;
+			margin-right: 10px;
+		}
+	}
+	.jq-selectbox__select, .jq-selectbox__dropdown li {
+		padding-left: 40px;
+		position: relative;
+		&:before {
+			width: 20px;
+			height: 20px;
+			border-radius: 50%;
+			position: absolute;
+			left: 10px;
+			top: 50%;
+			margin-top: -10px;
+			content: '';
+		}
+		&:after {
+			background-image: url("../images/icons-07.svg");
+			width: 10px;
+			height: 11px;
+			position: absolute;
+			left: 15px;
+			top: 50%;
+			margin-top: -5px;
+			content: '';
+		}
+	}
+	.yes {
+		.jq-selectbox__select {
+			&:before {
+				background-color: #18bf18;
+			}
+			&:after {
+				top: 48%;
+			}
+		}
+	}
+	li.yes {
+		&:before {
+			background-color: #18bf18;
+		}
+		&:after {
+			top: 48%;
+		}
+	}
+	.no {
+		.jq-selectbox__select {
+			&:before {
+				background-color: @red-color;
+			}
+			&:after {
+				transform: rotate(-180deg) scale(-1, 1);
+			}
+		}
+	}
+	li.no {
+		&:before {
+			background-color: @red-color;
+		}
+		&:after {
+			transform: rotate(-180deg) scale(-1, 1);
+		}
+	}
+}

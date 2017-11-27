@@ -482,4 +482,34 @@
 			}
 		}
 	}
+	.main-content {
+		.feedback-box {
+			.flex-container {
+				& > * {
+					width: 100%;
+				}
+			}
+			.rating {
+				text-align: left;
+				margin-bottom: 5px;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				ul {
+					padding: 0;
+				}
+				li {
+					margin: 0;
+				}
+			}
+			.r-side, .rating {
+				& > * {
+					width: calc(~"50% - 5px");
+				}
+			}
+			.red-btn {
+				display: block;
+			}
+		}
+	}
 }

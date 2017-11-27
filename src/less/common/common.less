@@ -237,7 +237,13 @@ a.red-color {
 	.soc-links {
 		display: inline-block;
 		vertical-align: middle;
-		margin: -10px 0 0 10px;
+		li {
+			width: 40px;
+			height: 40px;
+			&:last-child {
+				margin-right: 0;
+			}
+		}
 	}
 	.jq-selectbox__select {
 		height: 38px;

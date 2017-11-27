@@ -114,4 +114,29 @@
 			}
 		}
 	}
+	.main-content {
+		.feedback-box {
+			.flex-container {
+				flex-wrap: wrap;
+				& > * {
+					width: calc(~"50% - 5px");
+					margin: 0 0 10px;
+				}
+			}
+			.rating {
+				text-align: right;
+			}
+			.soc-links {
+				margin: 10px 0;
+			}
+			.r-side {
+				& > span {
+					margin: 0;
+				}
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}
+		}
+	}
 }
