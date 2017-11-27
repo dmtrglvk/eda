@@ -4,17 +4,20 @@ html(lang='ru')
 	body
 		.page
 			include ../components/header.pug
-			.content.inner-page
+			.content.inner-page.none-sidebar
 				.container
-					.thanx-box.box
-						h1.style-h1 Ваш заказ оформлен!
-						p Спасибо! Номер вашего заказа
-							strong 35483.
-							br
-							| Совсем скоро с вами свяжется наш менеджер.
-						p А еще вы заработали дополнительные бонусы.
-						.bonuses
-							svg
-								use(xlink:href='#icons-15')
-							strong 1740
+					.content-wrap.holder
+						.main-content
+							.thanx-box.box
+								h1.style-h1 Ваш заказ оформлен!
+								p Спасибо! Номер вашего заказа
+									strong 35483.
+									br
+									| Совсем скоро с вами свяжется наш менеджер.
+								p А еще вы заработали дополнительные бонусы.
+								.bonuses
+									svg
+										use(xlink:href='#icons-15')
+									strong 1740
+					include ../components/description-block.pug
 			include ../components/footer.pug
