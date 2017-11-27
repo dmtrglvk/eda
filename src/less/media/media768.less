@@ -277,5 +277,42 @@
 			}
 		}
 	}
+	.profile-sidebar {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		.points {
+			display: none;
+		}
+		.sidebar-box {
+			border:0;
+			margin: 0;
+			padding: 0;
+			ul {
+				padding: 0;
+				li {
+					display: inline-block;
+					margin: 0 0 0 20px;
+					&:first-child {
+						margin: 0;
+					}
+				}
+			}
+		}
+	}
+	.sidebar-section {
+		&.mobile-only {
+			display: block;
+			margin: 20px 0;
+			.points {
+				display: block;
+				& > span {
+					display: inline-block;
+					vertical-align: top;
+					margin: 5px 10px 0 0;
+				}
+			}
+		}
+	}
 
 }

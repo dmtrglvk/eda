@@ -18,6 +18,8 @@ $(document).ready(function () {
 	amountDrop();
 	sidebarAccordion();
 	slideBlock('Не указывать контактное лицо', 'Указывать контактное лицо');
+	showPassword();
+	orderDateDetails();
 
 	$('.js-show-more').on('click', function(e){
 		e.preventDefault();
@@ -122,4 +124,34 @@ function slideBlock(openedText, closedText) {
 			el.text(openedText).addClass('opened').next(slide).slideDown(300);
 		}
 	});
+}
+
+function showPassword() {
+	var passwordBlock = $('.js-password'),
+		showPasswordBtn = passwordBlock.find('.js-show-password'),
+		passwordField = passwordBlock.find('.js-password-field');
+
+	if(passwordBlock.length) {
+		showPasswordBtn.on('click', function(){
+			var el = $(this);
+			if(el.hasClass('show')) {
+				el.removeClass('show').find('svg use').attr('xlink:href', '#icons-29');
+				passwordField.attr('type', 'password');
+			} else {
+				el.addClass('show').find('svg use').attr('xlink:href', '#icons-30');
+				passwordField.attr('type', 'text');
+			}
+		})
+	}
+}
+
+function orderDateDetails() {
+	var opener = $('.js-order-date-opener'),
+		slider = $('.js-order-date-details');
+	if(opener.length) {
+		opener.on('click', function(){
+			$(this).toggleClass('opened');
+			$(this).closest('tr').next(slider).toggle();
+		})
+	}
 }

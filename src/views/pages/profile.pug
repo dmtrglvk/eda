@@ -1,0 +1,221 @@
+doctype html
+html(lang='ru')
+	include ../common/head.pug
+	body
+		.page
+			include ../components/header.pug
+			.content.inner-page
+				.container
+					ul.breadcrumbs
+						li
+							a(href="#") Главная
+						li Акции
+					.content-wrap.holder
+						.cols-wrap
+							.sidebar
+								.sidebar-section.mobile-menu-only
+									select.js-select-style
+										option Профиль
+										option Промокоды
+										option История заказов
+								.sidebar-section.profile-sidebar
+									.sidebar-box
+										ul.sidebar-menu
+											li
+												a(href="#", class="active") Профиль
+											li
+												a(href="#") Промокоды
+												span 3
+											li
+												a(href="#") История заказов
+									.sidebar-box
+										.points
+											h3 Бонусы
+											p На вашем счету сейчас
+											svg
+												use(xlink:href='#icons-15')
+											strong 1740
+									.sidebar-box
+										ul.sidebar-menu
+											li
+												a(href="#") Выйти
+								.sidebar-section.mobile-only
+									.sidebar-box
+										.points
+											span На вашем счету сейчас
+											svg
+												use(xlink:href='#icons-15')
+											strong 1740
+						.main-content
+							.profile-section
+								h2 Персональные данные
+								.profile-form
+									form(action="#")
+										fieldset
+											input(type="text", value="Алексей")
+											input(type="text", value="+7 916 697-98-85", class="mask")
+											.password-wrap.js-password
+												input(type="password", value="p@ssword", class="js-password-field")
+												span.show-password.js-show-password
+													svg
+														use(xlink:href='#icons-29')
+											a(href="#", class="edit-personal-info") Редактировать
+							.profile-section
+								h2 Промокоды
+								.table-wrapper
+									table.profile-table
+										tr
+											th Промокод
+											th Ресторан
+											th Дата окончания
+										tr
+											td
+												strong BCFEAA
+											td
+												span.hidden-mobile-ttl Ресторан
+												span.profile-table-text Макдональдс
+											td
+												span.hidden-mobile-ttl Дата окончания
+												span.profile-table-text 4 ноября 2017
+										tr
+											td
+												strong 1CFBDB
+											td
+												span.hidden-mobile-ttl Ресторан
+												span.profile-table-text Пицца-лисица
+											td
+												span.hidden-mobile-ttl Дата окончания
+												span.profile-table-text 22 ноября 2017
+										tr
+											td
+												strong DC5668
+											td
+												span.hidden-mobile-ttl Ресторан
+												span.profile-table-text Ресторан вегетарианской кухни «Веган-стайл»
+											td
+												span.hidden-mobile-ttl Дата окончания
+												span.profile-table-text 17 января 2018
+							.profile-section
+								h2 История заказов
+								.table-wrapper
+									table.profile-table
+										tr
+											th Дата
+											th бонусы
+											th Сумма
+											th Статус
+										tr
+											td
+												.order-date.js-order-date-opener 4 ноября 2017
+											td
+												span.hidden-mobile-ttl Бонусы
+												.bonuses-amount
+													svg
+														use(xlink:href='#icons-15')
+													span 1740
+											td
+												span.hidden-mobile-ttl Сумма
+												| 1740 &#x20bd;
+											td
+												span.hidden-mobile-ttl Статус
+												.order-status.done
+													svg
+														use(xlink:href='#icons-14')
+													span Доставлен
+										tr.slide-row.js-order-date-details
+											td(colspan="4")
+												.slide-content
+													table
+														tr
+															td Калифорния
+															td 1 шт
+															td 50 &#x20bd;
+														tr
+															td О рицы маки
+															td 1 шт
+															td 50 &#x20bd;
+														tr
+															td Киото рору
+															td 1 шт
+															td 50 &#x20bd;
+														tr
+															td Чизбургер
+															td 1 шт
+															td 50 &#x20bd;
+										tr
+											td
+												.order-date.js-order-date-opener 4 ноября 2017
+											td
+												span.hidden-mobile-ttl Бонусы
+												.bonuses-amount
+													svg
+														use(xlink:href='#icons-15')
+													span 1740
+											td
+												span.hidden-mobile-ttl Сумма
+												| 1740 &#x20bd;
+											td
+												span.hidden-mobile-ttl Статус
+												.order-status.pending
+													svg
+														use(xlink:href='#icons-28')
+													span Оплачен
+										tr.slide-row.js-order-date-details
+											td(colspan="4")
+												.slide-content
+													table
+														tr
+															td Калифорния
+															td 1 шт
+															td 50 &#x20bd;
+														tr
+															td О рицы маки
+															td 1 шт
+															td 50 &#x20bd;
+														tr
+															td Киото рору
+															td 1 шт
+															td 50 &#x20bd;
+														tr
+															td Чизбургер
+															td 1 шт
+															td 50 &#x20bd;
+										tr
+											td
+												.order-date.js-order-date-opener 4 ноября 2017
+											td
+												span.hidden-mobile-ttl Бонусы
+												.bonuses-amount
+													svg
+														use(xlink:href='#icons-15')
+													span 1740
+											td
+												span.hidden-mobile-ttl Сумма
+												| 1740 &#x20bd;
+											td
+												span.hidden-mobile-ttl Статус
+												.order-status.pay
+													a(href="#", class="red-btn") Оплатить
+										tr.slide-row.js-order-date-details
+											td(colspan="4")
+												.slide-content
+													table
+														tr
+															td Калифорния
+															td 1 шт
+															td 50 &#x20bd;
+														tr
+															td О рицы маки
+															td 1 шт
+															td 50 &#x20bd;
+														tr
+															td Киото рору
+															td 1 шт
+															td 50 &#x20bd;
+														tr
+															td Чизбургер
+															td 1 шт
+															td 50 &#x20bd;
+
+				include ../components/description-block.pug
+			include ../components/footer.pug
