@@ -1,0 +1,76 @@
+header.header
+	.top-header
+		.container.holder
+			ul.top-menu.flex-container
+				li
+					a(href="#") О проекте
+				li
+					a(href="#") Как подключиться
+				li
+					a(href="#") Соглашение
+				li
+					a(href="#") Бонусная программа
+				li
+					a(href="#") Контакты
+			a.menu-opener.js-menu-opener(href="#")
+				span open menu
+			.sign-box
+				.user-bonus
+					svg
+						use(xlink:href='#icons-15')
+					strong 1740
+				.user-box
+					span.user-name.js-dropdown-opener Alexey
+						svg
+							use(xlink:href='#icons-18')
+					svg.js-dropdown-opener
+						use(xlink:href='#icons-09')
+					.menu-dropdown.js-dropdown
+						ul
+							li
+								a(href="#") Профиль
+							li
+								a(href="#") Промокоды
+							li
+								a(href="#") История заказов
+						a.exit(href="#") Выйти
+	.header-area
+		.container.flex-container
+			a.logo(href="#") Принес время для Вас
+			.center-box.hidden-box
+				svg
+					use(xlink:href='#icons-13')
+				strong уже
+					span.red 30 заказов!
+				span доставили сегодня
+			.center-box
+				svg
+					use(xlink:href='#icons-11')
+				strong 8 (800) 550-660-1
+				span круглосуточно!
+			.btn-order
+				a.red-btn(href="#") Универсальный заказ
+	.search-row
+		.container.flex-container
+			.search-wrap
+				form(action="#")
+					fieldset
+						.holder
+							select.grey-bg.js-select-style
+								option Санкт-Петербург
+								option Москва
+								option Санкт-Петербург
+							select.js-select-style
+								option Выбрать улицу
+								option ул. Ленина
+								option ул. Пушкина
+							button.red-btn Найти
+								span  рестораны
+			a.header-sale(href="#")
+				svg
+					use(xlink:href='#icons-08')
+				strong Акции
+			a.header-cart(href="#")
+				svg
+					use(xlink:href='#icons-10')
+				strong 300 &#x20bd;

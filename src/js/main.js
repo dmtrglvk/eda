@@ -18,6 +18,7 @@ $(document).ready(function () {
 	showPassword();
 	orderDateDetails();
 	ratingBar();
+	menuDropdown();
 
 	$('.js-show-more').on('click', function(e){
 		e.preventDefault();
@@ -160,5 +161,14 @@ function ratingBar() {
 	item.on('click', function () {
 		item.removeClass('active');
 		$(this).prevAll().addBack().addClass('active');
+	})
+}
+
+function menuDropdown() {
+	var opener = $('.js-dropdown-opener'),
+		dropdown = $('.js-dropdown');
+
+	opener.on('click', function(){
+		$(this).parent().toggleClass('opened').find(dropdown).stop().slideToggle();
 	})
 }
