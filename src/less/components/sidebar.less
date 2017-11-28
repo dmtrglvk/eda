@@ -6,11 +6,15 @@
 			a {
 				color: @black-color;
 				text-decoration: none;
-				display: block;
+				display: inline-block;
 				margin: 0 0 0 -29px;
 				padding: 0 0 0 29px;
 				border-left: 2px solid transparent;
+				.transition(color, 0.2s);
 				&:hover {
+					color: @orange-color;
+				}
+				&.active {
 					color: @grey-color;
 					border-left-color: @orange-color;
 				}
@@ -48,15 +52,14 @@
 			width: 17px;
 			height: 17px;
 			fill: @orange-color;
-			display: inline-block;
-			vertical-align: middle;
+			display: block;
 		}
 	}
 	input[type="text"] {
 		border: 0;
 		background: none;
 		margin: 0;
-		padding: 11px 15px 5px 8px;
+		padding: 8px 15px 8px 8px;
 		width: calc(~"100% - 39px");
 		box-sizing: border-box;
 		font: 12px/16px @pts-regular;
@@ -88,10 +91,11 @@
 .box-ttl {
 	font: 24px/28px @boomboom;
 	display: block;
-	color: @black-color;
+	color: @orange-color;
 	padding: 21px 0;
 	cursor: pointer;
 	position: relative;
+	.transition(color, 0.5s);
 	svg {
 		width: 15px;
 		height: 7px;
@@ -101,7 +105,11 @@
 		margin-top: -4px;
 		opacity: 0.5;
 	}
+	&:hover {
+		color: @red-color;
+	}
 	&.opened {
+		color: @black-color;
 		svg {
 			transform: rotate(-180deg);
 		}

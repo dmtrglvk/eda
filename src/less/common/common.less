@@ -369,7 +369,7 @@ a.red-color {
 	}
 }
 .nav-row {
-	padding: 20px 0 10px;
+	padding: 20px 0 10px 23px;
 	li {
 		display: inline-block;
 		font: 28px/32px @boomboom;
@@ -380,6 +380,10 @@ a.red-color {
 		}
 		a {
 			color: @yellow-color;
+			.transition(color, 0.5s);
+			&:hover {
+				color: @red-color;
+			}
 			&.active {
 				color: @black-color;
 			}
@@ -574,7 +578,8 @@ a.red-color {
 			font: 64px/68px @pts-bold;
 			color: @red-color;
 		}
-		svg {
+		svg,
+		&>img {
 			display: inline-block;
 			margin-right: 10px;
 		}

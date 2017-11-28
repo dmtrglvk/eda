@@ -74,11 +74,11 @@ function amountDrop() {
 	amountOpener.on('click', function(){
 		var el = $(this);
 		if(el.parent().find(amountAdjuster).hasClass('opened-amountAdjuster')) {
-			el.parent().find(amountAdjuster).removeClass('opened-amountAdjuster').hide();
+			el.parent().find(amountAdjuster).removeClass('opened-amountAdjuster').css('top', '-9999em');
 			newAmount = el.parent().find(amountAdjuster).find('input[type=number]').val();
 			el.parent().find(amountValue).text(newAmount);
 		} else {
-			el.parent().find(amountAdjuster).addClass('opened-amountAdjuster').show();
+			el.parent().find(amountAdjuster).addClass('opened-amountAdjuster').css('top', '90%');
 		}
 	});
 	// $(document).on('mouseup', function(e){
