@@ -662,6 +662,84 @@ a.red-color {
 		}
 	}
 }
+.soc-links {
+	li {
+		display: inline-block;
+		width: 45px;
+		height: 45px;
+		border-radius: 50%;
+		background-color: @yellow-color;
+		.transition(background-color, 0.5s);
+		margin-right: 6px;
+		&:hover {
+			background-color: @orange-color;
+		}
+		&:active {
+			background-color: @brown-color;
+		}
+		a {
+			display: block;
+			height: 100%;
+			text-indent: -9999px;
+			position: relative;
+			&:after {
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				background-image: url("../images/sprite.png");
+				content: '';
+			}
+			&.fb {
+				&:after {
+					background-position: -95px 0;
+					width: 11px;
+					height: 23px;
+					margin: -11px 0 0 -6px;
+				}
+			}
+			&.tw {
+				&:after {
+					background-position: -110px 0;
+					width: 17px;
+					height: 14px;
+					margin: -7px 0 0 -8px;
+				}
+			}
+			&.vk {
+				&:after {
+					background-position: -132px 0;
+					width: 22px;
+					height: 13px;
+					margin: -6px 0 0 -11px;
+				}
+			}
+			&.google {
+				&:after {
+					background-position: -159px 0;
+					width: 16px;
+					height: 16px;
+					margin: -8px 0 0 -8px;
+				}
+			}
+			&.instagram {
+				&:after {
+					background-position: -178px 0;
+					width: 15px;
+					height: 15px;
+					margin: -7px 0 0 -7px;
+				}
+			}
+			&.classmates {
+				&:after {
+					background-position: -198px 0;
+					width: 11px;
+					height: 18px;
+					margin: -9px 0 0 -5px;
+				}
+			}
+		}
+	}
+}
 
 
 
