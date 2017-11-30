@@ -1,9 +1,9 @@
-.login-popup.popup
+.login-popup.popup#login-popup
 	.popup-heading
 		ul
 			li.active Вход
 			li
-				a(href="#") Регистрация
+				a(href="#register-popup", class="open-popup") Регистрация
 	form(action="#")
 		fieldset
 			.fields-wrap
@@ -27,186 +27,188 @@
 				input(type="submit", value="Войти", class="red-btn")
 	button.close-popup close
 
-//.register-popup.popup
-//	.popup-heading
-//		ul
-//			li
-//				a(href="#") Вход
-//			li.active Регистрация
-//	form(action="#")
-//		fieldset
-//			.fields-wrap
-//				input(type="tel", placeholder="Номер телефона")
-//				input(type="password", placeholder="Пароль")
-//				input(type="password", placeholder="Пароль еще раз")
-//			.checkbox-holder
-//				input(type="checkbox" id="check-agree" checked)
-//				label(for="check-agree") Согласен с
-//					a.red-color(href="#")  правилами сервиса
-//			ul.soc-links
-//				li
-//					a.fb(href="#") facebook
-//				li
-//					a.tw(href="#") twitter
-//				li
-//					a.vk(href="#") vk
-//				li
-//					a.google(href="#") google
-//				li
-//					a.instagram(href="#") instagram
-//				li
-//					a.classmates(href="#") classmates
-//			.btn-wrap
-//				input(type="submit", value="Зарегистрироваться", class="red-btn")
-//	button.close-popup close
+.register-popup.popup#register-popup
+	.popup-heading
+		ul
+			li
+				a(href="#login-popup", class="open-popup") Вход
+			li.active Регистрация
+	form(action="#")
+		fieldset
+			.fields-wrap
+				input(type="tel", placeholder="Номер телефона")
+				input(type="password", placeholder="Пароль")
+				input(type="password", placeholder="Пароль еще раз")
+			.checkbox-holder
+				input(type="checkbox" id="check-agree" checked)
+				label(for="check-agree") Согласен с
+					a.red-color(href="#")  правилами сервиса
+			ul.soc-links
+				li
+					a.fb(href="#") facebook
+				li
+					a.tw(href="#") twitter
+				li
+					a.vk(href="#") vk
+				li
+					a.google(href="#") google
+				li
+					a.instagram(href="#") instagram
+				li
+					a.classmates(href="#") classmates
+			.btn-wrap
+				input(type="submit", value="Зарегистрироваться", class="red-btn")
+	button.close-popup close
 
-//.payment-popup.popup.successful
-//	.popup-header
-//		strong Подтверждение оплаты
-//	.popup-body
-//		.icon
-//			svg
-//				use(xlink:href='#icons-12')
-//		strong.title Оплата прошла успешно!
-//		p Спасибо, все в порядке. Наш менеджер свяжется с вами совсем скоро!
-//			br
-//			| До связи :)
-//		a.red-btn(href="#") Закрыть
-//	button.close-popup close
+.payment-popup.popup.successful
+	.popup-header
+		strong Подтверждение оплаты
+	.popup-body
+		.icon
+			svg
+				use(xlink:href='#icons-12')
+		strong.title Оплата прошла успешно!
+		p Спасибо, все в порядке. Наш менеджер свяжется с вами совсем скоро!
+			br
+			| До связи :)
+		a.red-btn(href="#") Закрыть
+	button.close-popup close
 
-//.payment-popup.popup.failed
-//	.popup-header
-//		strong Подтверждение оплаты
-//	.popup-body
-//		.icon
-//			strong :(
-//		strong.title Оплата не прошла
-//		p Что-то не так. Попробуйте еще раз.
-//		a.red-btn(href="#") Закрыть
-//	button.close-popup close
+.payment-popup.popup.failed
+	.popup-header
+		strong Подтверждение оплаты
+	.popup-body
+		.icon
+			strong :(
+		strong.title Оплата не прошла
+		p Что-то не так. Попробуйте еще раз.
+		a.red-btn(href="#") Закрыть
+	button.close-popup close
 
-//.popup-order.popup
-//	.popup-header
-//		strong Все о пирогах
-//	.popup-main.flex-container
-//		.left-col
-//			.section
-//				strong.section-ttl.js-block-opener.opened Пицца
-//					svg
-//						use(xlink:href='#icons-18')
-//				.section-drop.js-opened-block.opened
-//					.holder
-//						.radio-popup-holder
-//							input(type="radio", name="radio-group3", id="popup-radio-1")
-//							label(for="popup-radio-1") Маргарита
-//						.item-price
-//							span +70 &#x20bd;
-//					.holder
-//						.radio-popup-holder
-//							input(type="radio", name="radio-group3", id="popup-radio-2", checked)
-//							label(for="popup-radio-2") Аляска
-//						.item-price
-//							span +70 &#x20bd;
-//					.holder
-//						.radio-popup-holder
-//							input(type="radio", name="radio-group3", id="popup-radio-3")
-//							label(for="popup-radio-3") Баварская
-//						.item-price
-//							span +70 &#x20bd;
-//					.holder
-//						.radio-popup-holder
-//							input(type="radio", name="radio-group3", id="popup-radio-4")
-//							label(for="popup-radio-4") Барбекю
-//						.item-price
-//							span +70 &#x20bd;
-//					.holder
-//						.radio-popup-holder
-//							input(type="radio", name="radio-group3", id="popup-radio-5")
-//							label(for="popup-radio-5") Вегетарианская
-//						.item-price
-//							span +70 &#x20bd;
-//					.holder
-//						.radio-popup-holder
-//							input(type="radio", name="radio-group3", id="popup-radio-6")
-//							label(for="popup-radio-6") Гавайская
-//						.item-price
-//							span +30 &#x20bd;
-//					.holder
-//						.radio-popup-holder
-//							input(type="radio", name="radio-group3", id="popup-radio-7")
-//							label(for="popup-radio-7") Гавайская Карри
-//						.item-price
-//							span +140 &#x20bd;
-//					.holder
-//						.radio-popup-holder
-//							input(type="radio", name="radio-group3", id="popup-radio-8")
-//							label(for="popup-radio-8") Де люкс
-//						.item-price
-//							span +110 &#x20bd;
-//					.holder
-//						.radio-popup-holder
-//							input(type="radio", name="radio-group3", id="popup-radio-9")
-//							label(for="popup-radio-9") Калифорния
-//						.item-price
-//							span +170 &#x20bd;
-//					.holder
-//						.radio-popup-holder
-//							input(type="radio", name="radio-group3", id="popup-radio-10")
-//							label(for="popup-radio-10") Манхеттен
-//						.item-price
-//							span +230 &#x20bd;
-//			.section
-//				strong.section-ttl.js-block-opener Тесто
-//					svg
-//						use(xlink:href='#icons-18')
-//				.section-drop.js-opened-block
-//					.holder
-//						.radio-popup-holder
-//							input(type="radio", name="radio-group4", id="popup-radio-11")
-//							label(for="popup-radio-11") Маргарита
-//						.item-price
-//							span +70 &#x20bd;
-//					.holder
-//						.radio-popup-holder
-//							input(type="radio", name="radio-group4", id="popup-radio-12", checked)
-//							label(for="popup-radio-12") Аляска
-//						.item-price
-//							span +70 &#x20bd;
-//					.holder
-//						.radio-popup-holder
-//							input(type="radio", name="radio-group4", id="popup-radio-13")
-//							label(for="popup-radio-13") Баварская
-//						.item-price
-//							span +70 &#x20bd;
-//			.section
-//				strong.section-ttl.js-block-opener Ингредиенты
-//					svg
-//						use(xlink:href='#icons-18')
-//				.section-drop.js-opened-block
-//					.holder
-//						.radio-popup-holder
-//							input(type="radio", name="radio-group5", id="popup-radio-21")
-//							label(for="popup-radio-21") Маргарита
-//						.item-price
-//							span +70 &#x20bd;
-//					.holder
-//						.radio-popup-holder
-//							input(type="radio", name="radio-group5", id="popup-radio-22", checked)
-//							label(for="popup-radio-22") Аляска
-//						.item-price
-//							span +70 &#x20bd;
-//					.holder
-//						.radio-popup-holder
-//							input(type="radio", name="radio-group5", id="popup-radio-23")
-//							label(for="popup-radio-23") Баварская
-//						.item-price
-//							span +70 &#x20bd;
-//		.right-col
-//			a.item-picture(href="#")
-//				img(src="images/img03.jpg")
-//			strong.item-cost 300 &#x20bd;
-//			.number-plus-minus
-//				input(type="number", min="1", value="1")
-//				span.mark-amount шт
-//			a.red-btn(href="#") Добавить в заказ
-//	button.close-popup close
+.popup-order.popup#order-popup
+	.popup-header
+		strong Все о пирогах
+	.popup-main.flex-container
+		.left-col
+			.section
+				strong.section-ttl.js-block-opener.opened Пицца
+					svg
+						use(xlink:href='#icons-18')
+				.section-drop.js-opened-block.opened
+					.holder
+						.radio-popup-holder
+							input(type="radio", name="radio-group3", id="popup-radio-1")
+							label(for="popup-radio-1") Маргарита
+						.item-price
+							span +70 &#x20bd;
+					.holder
+						.radio-popup-holder
+							input(type="radio", name="radio-group3", id="popup-radio-2", checked)
+							label(for="popup-radio-2") Аляска
+						.item-price
+							span +70 &#x20bd;
+					.holder
+						.radio-popup-holder
+							input(type="radio", name="radio-group3", id="popup-radio-3")
+							label(for="popup-radio-3") Баварская
+						.item-price
+							span +70 &#x20bd;
+					.holder
+						.radio-popup-holder
+							input(type="radio", name="radio-group3", id="popup-radio-4")
+							label(for="popup-radio-4") Барбекю
+						.item-price
+							span +70 &#x20bd;
+					.holder
+						.radio-popup-holder
+							input(type="radio", name="radio-group3", id="popup-radio-5")
+							label(for="popup-radio-5") Вегетарианская
+						.item-price
+							span +70 &#x20bd;
+					.holder
+						.radio-popup-holder
+							input(type="radio", name="radio-group3", id="popup-radio-6")
+							label(for="popup-radio-6") Гавайская
+						.item-price
+							span +30 &#x20bd;
+					.holder
+						.radio-popup-holder
+							input(type="radio", name="radio-group3", id="popup-radio-7")
+							label(for="popup-radio-7") Гавайская Карри
+						.item-price
+							span +140 &#x20bd;
+					.holder
+						.radio-popup-holder
+							input(type="radio", name="radio-group3", id="popup-radio-8")
+							label(for="popup-radio-8") Де люкс
+						.item-price
+							span +110 &#x20bd;
+					.holder
+						.radio-popup-holder
+							input(type="radio", name="radio-group3", id="popup-radio-9")
+							label(for="popup-radio-9") Калифорния
+						.item-price
+							span +170 &#x20bd;
+					.holder
+						.radio-popup-holder
+							input(type="radio", name="radio-group3", id="popup-radio-10")
+							label(for="popup-radio-10") Манхеттен
+						.item-price
+							span +230 &#x20bd;
+			.section
+				strong.section-ttl.js-block-opener Тесто
+					svg
+						use(xlink:href='#icons-18')
+				.section-drop.js-opened-block
+					.holder
+						.radio-popup-holder
+							input(type="radio", name="radio-group4", id="popup-radio-11")
+							label(for="popup-radio-11") Маргарита
+						.item-price
+							span +70 &#x20bd;
+					.holder
+						.radio-popup-holder
+							input(type="radio", name="radio-group4", id="popup-radio-12", checked)
+							label(for="popup-radio-12") Аляска
+						.item-price
+							span +70 &#x20bd;
+					.holder
+						.radio-popup-holder
+							input(type="radio", name="radio-group4", id="popup-radio-13")
+							label(for="popup-radio-13") Баварская
+						.item-price
+							span +70 &#x20bd;
+			.section
+				strong.section-ttl.js-block-opener Ингредиенты
+					svg
+						use(xlink:href='#icons-18')
+				.section-drop.js-opened-block
+					.holder
+						.radio-popup-holder
+							input(type="radio", name="radio-group5", id="popup-radio-21")
+							label(for="popup-radio-21") Маргарита
+						.item-price
+							span +70 &#x20bd;
+					.holder
+						.radio-popup-holder
+							input(type="radio", name="radio-group5", id="popup-radio-22", checked)
+							label(for="popup-radio-22") Аляска
+						.item-price
+							span +70 &#x20bd;
+					.holder
+						.radio-popup-holder
+							input(type="radio", name="radio-group5", id="popup-radio-23")
+							label(for="popup-radio-23") Баварская
+						.item-price
+							span +70 &#x20bd;
+		.right-col
+			a.item-picture(href="#")
+				img(src="images/img03.jpg")
+			strong.item-cost 300 &#x20bd;
+			.number-plus-minus
+				input(type="number", min="1", value="1")
+				span.mark-amount шт
+			a.red-btn(href="#") Добавить в заказ
+	button.close-popup close
+
+.fader
