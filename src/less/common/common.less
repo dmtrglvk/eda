@@ -745,6 +745,53 @@ a.red-color {
 		}
 	}
 }
+.infobar {
+	background-color: @grey-light-color;
+	box-shadow: 0 0 35px 0 rgba(0, 0, 0, 0.5);
+	padding: 7px 0;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	.container {
+		max-width: 655px;
+	}
+	.order-info {
+		align-items: flex-start;
+	}
+	.cart-icon {
+		width: 31px;
+		height: 40px;
+		margin-right: 14px;
+		display: block;
+		fill: @black-color;
+	}
+	.info-box {
+		font-size: 14px;
+		line-height: 18px;
+		position: relative;
+		padding-right: 25px;
+		color: @black-color;
+		& > strong {
+			font: 18px/22px @pts-bold;
+			display: block;
+		}
+	}
+	.tooltip {
+		top: 3px;
+		right: 0;
+		svg {
+			fill: @red-color;
+			width: 15px;
+			height: 15px;
+		}
+		.tooltip-info {
+			padding: 13px 20px;
+			width: 300px;
+		}
+	}
+}
 
 
 
