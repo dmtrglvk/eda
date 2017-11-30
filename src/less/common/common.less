@@ -2,11 +2,6 @@ body {
 	color: #424242;
 	font: 16px/24px @pts-regular;
 	overflow-x: hidden;
-	&.menu-opened {
-		overflow: hidden;
-		position: fixed;
-		width: 100%;
-	}
 }
 body > svg {
 	left: -9999px;
@@ -17,17 +12,6 @@ body > svg {
 	width:100%;
 	overflow: hidden;
 	position: relative;
-	&:after {
-		.menu-opened & {
-			position: fixed;
-			background: fade(#000, 55%);
-			top: 52px;
-			width: 100%;
-			height: calc(~"100% - 50px");
-			z-index: 69;
-			content: '';
-		}
-	}
 }
 .container {
 	max-width: 1280px;
@@ -74,6 +58,9 @@ body > svg {
 			.error-page& {
 				color: @red-color;
 			}
+		}
+		br {
+			display: none;
 		}
 	}
 	h2 {
@@ -788,7 +775,57 @@ a.red-color {
 		}
 	}
 }
-
+.tooltip {
+	position: absolute;
+	top: 13px;
+	right: 15px;
+	svg {
+		width: 20px;
+		height: 20px;
+		display: inline-block;
+		fill: @orange-color;
+		cursor: pointer;
+	}
+	.tooltip-info {
+		visibility: hidden;
+		position: absolute;
+		bottom: 0;
+		width: 486px;
+		box-sizing: border-box;
+		background: #fff;
+		padding: 25px 30px;
+		color: #000;
+		box-shadow: 0 8px 9px 2px rgba(118, 152, 159, 0.16);
+		border-radius: 3px;
+		z-index: -1;
+		opacity: 0;
+		.transition(all, 0.5s);
+		p {
+			margin: 0;
+		}
+	}
+	&.tooltip-info-shown {
+		.tooltip-info {
+			visibility: visible;
+			z-index: 3;
+			opacity: 1;
+		}
+	}
+	.close-tooltip-mobiles {
+		position: absolute;
+		top: 5px;
+		right: 5px;
+		width:20px;
+		height: 20px;
+		line-height:20px;
+		text-align: center;
+		color: @red-color !important;
+		font-family: Verdana, Arial, sans-serif;
+		text-transform: lowercase;
+		cursor: pointer;
+		display: none;
+	}
+}
 
 
 

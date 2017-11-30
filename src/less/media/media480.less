@@ -1,4 +1,24 @@
 @media screen and (max-width: 767px) {
+	body {
+		&.menu-opened {
+			overflow: hidden;
+			position: fixed;
+			width: 100%;
+		}
+	}
+	.page {
+		&:after {
+			.menu-opened & {
+				position: fixed;
+				background: fade(#000, 55%);
+				top: 52px;
+				width: 100%;
+				height: calc(~"100% - 50px");
+				z-index: 69;
+				content: '';
+			}
+		}
+	}
 	.content {
 		h1 {
 			font-size: 36px;
@@ -130,7 +150,6 @@
 	}
 	.delivery-item {
 		.rating-row {
-			clear: left !important;
 			margin-bottom: 5px;
 		}
 		.top-card & {
@@ -179,13 +198,13 @@
 			margin-bottom: 5px;
 		}
 	}
-	.nav-menu {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-around;
-		li {
-			width: calc(~"50% - 10px");
-			margin-right: 0;
+	.feedback-box {
+		.jq-selectbox__select {
+			padding-left: 10px;
+			&:before,
+			&:after {
+				display: none;
+			}
 		}
 	}
 	.sale-item {

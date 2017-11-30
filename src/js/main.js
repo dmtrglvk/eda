@@ -64,6 +64,26 @@ $(document).ready(function () {
 		})
 	}
 
+	if($('.tooltip').length) {
+		$('.tooltip').each(function(){
+			var el = $(this);
+			if($(window).width() < 1000) {
+				el.find('svg').click(function(){
+					el.addClass('tooltip-info-shown');
+				});
+				el.find('.close-tooltip-mobiles').click(function(){
+					$(this).parent().parent().removeClass('tooltip-info-shown');
+				})
+			} else {
+				el.hover(function(){
+					el.addClass('tooltip-info-shown');
+				}, function(){
+					el.removeClass('tooltip-info-shown');
+				})
+			}
+		});
+	}
+
 });
 
 function mobileMenu() {

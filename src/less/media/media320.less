@@ -16,6 +16,15 @@
 	.menu-opener {
 		margin-left: 18px;
 	}
+	.nav-menu {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		li {
+			width: calc(~"50% - 10px");
+			margin-right: 0;
+		}
+	}
 	.center-box {
 		padding-left: 0;
 		margin-right: 15px;
@@ -91,6 +100,9 @@
 		}
 	}
 	.delivery-item {
+		.rating-row {
+			clear: left !important;
+		}
 		margin-bottom: 10px;
 		.payment-list {
 			display: none;
@@ -303,15 +315,6 @@
 			}
 		}
 	}
-	.feedback-box {
-		.jq-selectbox__select {
-			padding-left: 10px;
-			&:before,
-			&:after {
-				display: none;
-			}
-		}
-	}
 	.infobar {
 		.cart-icon {
 			display: none;
@@ -319,6 +322,13 @@
 		.info-box {
 			& > strong {
 				font-size: 16px;
+			}
+		}
+	}
+	.content {
+		h1 {
+			br {
+				display: block;
 			}
 		}
 	}
