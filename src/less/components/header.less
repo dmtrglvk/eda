@@ -206,9 +206,15 @@
 		svg {
 			width: 37px;
 			height: 38px;
+			.transition(all, 0.5s);
 		}
 		font: 24px/28px @boomboom;
 		color: @red-color;
+		&:hover {
+			svg {
+				transform: rotate(360deg);
+			}
+		}
 	}
 	.header-cart {
 		display: block;
@@ -221,6 +227,12 @@
 		strong {
 			position: relative;
 			top: 5px;
+		}
+		&:hover {
+			svg {
+				animation: ring 8s ease-in-out infinite;
+				transform-origin: 50% 4px;
+			}
 		}
 	}
 }

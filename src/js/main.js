@@ -56,6 +56,14 @@ $(document).ready(function () {
 		});
 	}
 
+	if($('.sale-info').length) {
+		$('.sale-info').each(function(){
+			var el = $(this),
+				p = el.find('p');
+			p.css('max-height', el.innerHeight() - el.find('.sub-ttl').outerHeight() - el.find('.bottom-info').outerHeight() - 36).dotdotdot();
+		})
+	}
+
 });
 
 function mobileMenu() {
@@ -134,10 +142,10 @@ function showPassword() {
 		showPasswordBtn.on('click', function(){
 			var el = $(this);
 			if(el.hasClass('show')) {
-				el.removeClass('show').find('svg use').attr('xlink:href', '#icons-29');
+				el.removeClass('show').find('img').attr('src', 'images/icons-29.svg');
 				passwordField.attr('type', 'password');
 			} else {
-				el.addClass('show').find('svg use').attr('xlink:href', '#icons-30');
+				el.addClass('show').find('img').attr('src', 'images/icons-30.svg');
 				passwordField.attr('type', 'text');
 			}
 		})

@@ -11,6 +11,10 @@
 			a {
 				text-decoration: none;
 				color: @yellow-color;
+				.transition(color, 0.5s);
+				&:hover {
+					color: @red-color;
+				}
 				&.active {
 					color: @black-color;
 				}
@@ -74,9 +78,10 @@
 .profile-form {
 	input[type="text"], input[type="password"] {
 		font-size: 16px;
-		line-height: 17px;
+		line-height: 20px;
+		padding-top: 0;
+		padding-bottom: 0;
 		height: 40px;
-		padding-top: 12px;
 	}
 	.password-wrap {
 		position: relative;
@@ -84,14 +89,16 @@
 		.show-password {
 			position: absolute;
 			top:9px;
+			z-index: 10;
 			right:15px;
 			cursor: pointer;
-		}
-		svg {
-			fill: @red-color;
-			display: block;
 			width:24px;
 			height:19px;
+			img {
+				display: block;
+				max-width:24px;
+				max-height:19px;
+			}
 		}
 	}
 	.edit-personal-info {
@@ -104,7 +111,7 @@
 		&:after {
 			content:"";
 			position: absolute;
-			bottom:4px;
+			bottom:1px;
 			left: 0;
 			width: 100%;
 			border-bottom: 1px dashed fade(@red-color, 30%);
@@ -127,6 +134,7 @@
 	}
 	td {
 		padding: 20px 30px;
+		font-size: 19px;
 		border-top: 2px solid @grey-light-color;
 		color:#000;
 		strong {
@@ -163,7 +171,7 @@
 		&:after {
 			content:"";
 			position: absolute;
-			bottom:4px;
+			bottom:1px;
 			left: 23px;
 			width: calc(~"100% - 23px");
 			border-bottom: 1px dashed fade(@red-color, 30%);
@@ -222,8 +230,9 @@
 			padding: 10px 0;
 		}
 		table {
-			width:50%;
+			width:74%;
 			td {
+				font-size: 16px;
 				padding:0 20px;
 			}
 		}
