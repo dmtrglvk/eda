@@ -219,7 +219,6 @@ function initPopups() {
 		lightbox.each(function(){
 			var lightbox_box = $(this);
 			if(id == $(this).attr('id')) {
-				// popupPosition(lightbox_box);
 				lightbox_box.fadeIn();
 				fader.fadeIn();
 			}
@@ -257,31 +256,4 @@ function initPopups() {
 		}
 	});
 
-}
-
-function popupPosition(popup){
-
-	if(popup.attr('id') == 'cart-popup'){
-		popup.css({
-			'position': 'absolute',
-			'top': $(window).scrollTop() + 40,
-			'margin-top': 0 + 'px'
-
-		});
-	} else{
-		if(popup.height() > $(window).height()) {
-			popup.css({
-				'position': 'absolute',
-				'top': $(window).scrollTop() + 20,
-				'margin-top': 0 + 'px'
-
-			});
-		} else {
-			popup.css({
-				'top': '50%',
-				'margin-top':-popup.height()/2 + 'px',
-				'position':'fixed'
-			});
-		}
-	}
 }
