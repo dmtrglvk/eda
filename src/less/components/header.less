@@ -192,7 +192,8 @@
 	border-radius: 3px;
 	width: 67%;
 }
-.search-row {
+.search-row,
+.top-header {
 	a{
 		text-decoration: none;
 	}
@@ -233,6 +234,16 @@
 				animation: ring 8s ease-in-out infinite;
 				transform-origin: 50% 4px;
 			}
+		}
+	}
+}
+.top-header {
+	.logo,
+	.header-cart,
+	.header-sale,
+	.sign-link svg {
+		@media screen and (min-width:767px) {
+			display: none;
 		}
 	}
 }

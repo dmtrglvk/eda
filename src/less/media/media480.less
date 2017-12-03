@@ -38,6 +38,7 @@
 	}
 	.header {
 		position: relative;
+		padding-top: 52px;
 		.logo {
 			background-image: url("../images/md-logo.png");
 			width: 117px;
@@ -45,6 +46,7 @@
 			position: absolute;
 			top: 5px;
 			left: 20px;
+			display: none;
 		}
 		.top-menu {
 			display: block;
@@ -53,7 +55,7 @@
 			right: -223px;
 			top: 52px;
 			background-color: #fff;
-			z-index: 70;
+			z-index: 100;
 			height: 100vh;
 			.transition(right, 0.5s);
 			.menu-opened & {
@@ -93,14 +95,15 @@
 			line-height: 22px;
 		}
 	}
-	.search-row {
+	.search-row,
+	.top-header {
 		.flex-container {
 			display: block;
 		}
 		.header-sale {
 			position: absolute;
 			top: 9px;
-			right: 235px;
+			right: 245px;
 			& > strong {
 				display: none;
 			}
@@ -112,11 +115,17 @@
 		.header-cart {
 			position: absolute;
 			top: 6px;
-			right: 122px;
+			right: 132px;
 			svg {
 				width: 26px;
 				height: 34px;
 			}
+		}
+	}
+	.search-row {
+		.header-sale,
+		.header-cart {
+			display: none;
 		}
 	}
 	.search-wrap {
@@ -555,6 +564,25 @@
 			.tooltip-info {
 				right: 0;
 			}
+		}
+	}
+	.top-header {
+		width:100%;
+		left:0;
+		top:0;
+		position: absolute;
+		z-index: 70;
+		background: #fff;
+		.transition(top, 0.3s);
+		.logo {
+			display: block;
+		}
+		&.nav-up {
+			top:-30px;
+		}
+		&.nav-down {
+			position: fixed;
+			top:0;
 		}
 	}
 }
