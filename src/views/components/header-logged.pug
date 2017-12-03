@@ -1,6 +1,7 @@
 header.header
 	.top-header
 		.container.holder
+			a.logo(href="#") Принес время для Вас
 			ul.top-menu.flex-container
 				li
 					a(href="#") О проекте
@@ -34,6 +35,14 @@ header.header
 							li
 								a(href="#") История заказов
 						a.exit(href="#") Выйти
+			a.header-sale(href="#")
+				svg
+					use(xlink:href='#icons-08')
+				strong Акции
+			a.header-cart(href="#")
+				svg
+					use(xlink:href='#icons-10')
+				strong 300 &#x20bd;
 	.header-area
 		.container.flex-container
 			a.logo(href="#") Принес время для Вас
@@ -61,10 +70,7 @@ header.header
 								option Санкт-Петербург
 								option Москва
 								option Санкт-Петербург
-							select.js-select-style
-								option Выбрать улицу
-								option ул. Ленина
-								option ул. Пушкина
+							input(type="text", placeholder="Выбрать улицу")
 							button.red-btn Найти
 								span  рестораны
 			a.header-sale(href="#")

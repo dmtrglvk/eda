@@ -328,4 +328,17 @@ html(lang='ru')
 				include ../components/fixed-infobar.pug
 			include ../components/footer.pug
 
-		include ../components/popup.pug
+		.payment-popup.popup.successful.show-me-onload
+			.popup-header
+				strong Подтверждение оплаты
+			.popup-body
+				.icon
+					svg
+						use(xlink:href='#icons-12')
+				strong.title Оплата прошла успешно!
+				p Спасибо, все в порядке. Наш менеджер свяжется с вами совсем скоро!
+					br
+					| До связи :)
+				a.red-btn(href="#") Закрыть
+			button.close-popup close
+		.fader

@@ -94,6 +94,7 @@ function mobileMenu() {
 	$('.js-menu-opener').on('click', function(e){
 		e.preventDefault();
 		$('body').toggleClass('menu-opened');
+		$(this).toggleClass('active');
 	})
 }
 
@@ -127,7 +128,8 @@ function sidebarAccordion() {
 	var opener = $('.js-block-opener'),
 		openedBlock = $('.js-opened-block');
 
-	opener.on('click', function(){
+	opener.on('click', function(e){
+		e.preventDefault();
 		var $this = $(this);
 		$this.toggleClass('opened').next(openedBlock).stop().slideToggle();
 	})
@@ -212,7 +214,16 @@ function initPopups() {
 		closer = $('.popup .close-popup'),
 		id;
 
-	lightbox.hide();
+	lightbox.each(function(){
+		var el = $(this);
+		if(el.hasClass('show-me-onload')) {
+			popupPosition(el);
+			el.fadeIn();
+			fader.fadeIn();
+		} else {
+			el.hide();
+		}
+	});
 
 	opener.on('click', function(e){
 		if($(this).parents('.popup')) {
@@ -248,6 +259,10 @@ function initPopups() {
 		element.click(function(e){
 			disappearLightbox();
 			e.preventDefault();
+			if($('body').hasClass('menu-opened')) {
+				$('.js-menu-opener').removeClass('active');
+				$('body').removeClass('menu-opened');
+			}
 		})
 	}
 

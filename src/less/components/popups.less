@@ -7,6 +7,14 @@
 	background-color: rgba(0, 0, 0, 0.5);
 	z-index: 99;
 	display: none;
+
+	.menu-opened & {
+		display: block;
+		top: 52px;
+		width: 100%;
+		height: calc(~"100% - 50px");
+		z-index: 69;
+	}
 }
 .popup {
 	background-color: #fff;
