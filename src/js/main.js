@@ -95,6 +95,10 @@ function mobileMenu() {
 		e.preventDefault();
 		$('body').toggleClass('menu-opened');
 		$(this).toggleClass('active');
+	});
+	$('.menu-fader').on('click', function(){
+		$('body').removeClass('menu-opened');
+		$('.js-menu-opener').removeClass('active');
 	})
 }
 
@@ -259,10 +263,6 @@ function initPopups() {
 		element.click(function(e){
 			disappearLightbox();
 			e.preventDefault();
-			if($('body').hasClass('menu-opened')) {
-				$('.js-menu-opener').removeClass('active');
-				$('body').removeClass('menu-opened');
-			}
 		})
 	}
 
