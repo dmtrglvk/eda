@@ -1,23 +1,23 @@
 .sidebar {
 	float: left;
 	width: 285px;
-	.menu-list {
-		li {
-			a {
-				color: @black-color;
-				text-decoration: none;
-				display: inline-block;
-				margin: 0 0 0 -29px;
-				padding: 0 0 0 29px;
-				border-left: 2px solid transparent;
-				.transition(color, 0.2s);
-				&:hover {
-					color: @orange-color;
-				}
-				&.active {
-					color: @grey-color;
-					border-left-color: @orange-color;
-				}
+}
+.menu-list {
+	li {
+		a {
+			color: @black-color;
+			text-decoration: none;
+			display: inline-block;
+			margin: 0 0 0 -29px;
+			padding: 0 0 0 29px;
+			border-left: 2px solid transparent;
+			.transition(color, 0.2s);
+			&:hover {
+				color: @orange-color;
+			}
+			&.active {
+				color: @grey-color;
+				border-left-color: @orange-color;
 			}
 		}
 	}

@@ -17,6 +17,38 @@
 			text-decoration: underline;
 		}
 	}
+	li {
+		&:first-child {
+			display: none;
+			a {
+				&:hover {
+					text-decoration: underline;
+					color: @black-color;
+				}
+			}
+			li {
+				border:0;
+				a {
+					padding-top: 6px;
+					padding-bottom: 6px;
+				}
+			}
+		}
+	}
+	.menu-accordion-opener {
+		font-family: inherit;
+		font-size: inherit;
+		line-height: inherit;
+	}
+	.menu-accordion-list {
+		display: none;
+		padding: 0 0 6px 10px;
+		li {
+			a {
+				margin-left: -10px;
+			}
+		}
+	}
 }
 .menu-opener {
 	float: right;
@@ -266,6 +298,15 @@
 		&:nth-child(2) {
 			width: calc(~"100% - 392px");
 		}
+	}
+	input[type=text] {
+		width: calc(~"100% - 392px");
+		padding: 0 10px;
+		outline: none;
+		font: 18px/46px @pts-regular;
+		border:0;
+		background: #fff;
+		box-sizing: border-box;
 	}
 	.jq-selectbox__select {
 		border: 0;

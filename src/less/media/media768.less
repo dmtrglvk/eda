@@ -36,6 +36,9 @@
 		.jq-selectbox:nth-child(2) {
 			width: calc(~"100% - 271px");
 		}
+		input[type=text] {
+			width: calc(~"100% - 271px");
+		}
 		.jq-selectbox__select {
 			font-size: 16px;
 			padding-right: 39px;
@@ -84,10 +87,9 @@
 		.amount-box {
 			width: 122px;
 		}
-		&:nth-child(2n) {
-			.tooltip-info {
-				right: 0;
-			}
+		.tooltip-info {
+			right: 0 !important;
+			left:auto !important;
 		}
 		.inner-page & {
 			width: calc(~"33.3333% - 14px");
@@ -356,6 +358,14 @@
 	.tooltip {
 		.close-tooltip-mobiles {
 			display: block;
+		}
+		.tooltip-info {
+			bottom:auto;
+			top:0;
+			.infobar & {
+				bottom: 0;
+				top: auto;
+			}
 		}
 	}
 }

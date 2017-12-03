@@ -4,6 +4,28 @@ header.header
 			a.logo(href="#") Принес время для Вас
 			ul.top-menu.flex-container
 				li
+					a(href="#", class="menu-accordion-opener box-ttl js-block-opener")
+						| Блюда
+						svg
+							use(xlink:href='#icons-18')
+					ul.menu-list.menu-accordion-list.js-opened-block
+						li
+							a(href="#") Пицца
+						li
+							a(href="#", class="active") Суши
+						li
+							a(href="#") Бурритос
+						li
+							a(href="#") Бургеры
+						li
+							a(href="#") Салаты
+						li
+							a(href="#") Первые блюда
+						li
+							a(href="#") Паста
+						li
+							a(href="#") Лапша
+				li
 					a(href="#") О проекте
 				li
 					a(href="#") Как подключиться
@@ -45,7 +67,7 @@ header.header
 					a(href="tel:88005506601") 8 (800) 550-660-1
 				span круглосуточно!
 			.btn-order
-				a.red-btn(href="#order-popup", class="open-popup") Универсальный заказ
+				a.red-btn(href="#") Универсальный заказ
 	.search-row
 		.container.flex-container
 			.search-wrap
@@ -56,10 +78,7 @@ header.header
 								option Санкт-Петербург
 								option Москва
 								option Санкт-Петербург
-							select.js-select-style
-								option Выбрать улицу
-								option ул. Ленина
-								option ул. Пушкина
+							input(type="text", placeholder="Выбрать улицу")
 							button.red-btn Найти
 								span  рестораны
 			a.header-sale(href="#")
